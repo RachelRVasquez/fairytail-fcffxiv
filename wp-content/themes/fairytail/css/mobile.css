@@ -1,0 +1,106 @@
+/* ======= Mobile/Tablet Styles ======= */
+
+.mobile-navicon { display: none; }
+
+@media all and (max-width: 1024px) {
+	.hide-1024 { display: none; }
+
+}/*tablet landscape end*/
+
+@media all and (max-width: 782px) {
+	/*WP Toolbar fix on mobile*/
+	#wpadminbar li#wp-admin-bar-wp-logo, #wp-toolbar>ul>li { display: block; }
+	#wp-toolbar>ul>li { margin: 0 8px 0 7px; }
+}
+
+@media all and (max-width: 768px) {
+	/*Modifiers*/
+	.box-sizing { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;  }
+	.hide-768 { display: none; }
+
+	/*Global*/
+	.wrapper, .middle-content, .banner-rotate, .footer { width: 100%; }
+	.banner-rotate { background-size: 100%; height: 120px; margin: 0 0 15px; }
+	.middle-content { padding: 15px; }
+	.site-content { width: 66.2%; }
+	.widget-area { width: 32%; }
+	.site-header { z-index: 300; }
+
+	/*header*/
+	.main-navigation { height: auto; width: 166px; background: #000; margin-left: 5px; position: relative;
+	-webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; -moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+	.main-menu { position: absolute; display: none; }
+	.main-menu > li { float: none; margin: 0; border-top: 1px solid #666; }
+	.main-menu > li:hover > a { text-shadow: none; }
+	.main-menu li a.btn-class { background: #000; padding: 10px 0; height: auto; text-indent: 0; font-size: 14px; line-height: 14px; }
+	a.mobile-navicon { display: block; width: 117px; height: 46px; background: url('../images/bg_menu.png') no-repeat #000; 
+	font-size: 14px; line-height: 51px; color: #fff; font-weight: bold; padding-left: 45px; }
+
+	/*Homepage*/
+	.news-author, .news-left { width: 25%; }
+		.news-author img, .news-left img { width: 100%; height: auto; }
+	.news-text, .news-right { width: 65%; }
+
+	/*Roster*/
+	.roster-wrap #roster-fc, .roster-wrap #roster-ls, .roster-table { width: 100%; }
+	.mobile-first { width: 30%; }
+	.roster-link { background-size: 100%; }
+
+
+}/*tablet end*/	
+
+@media all and (max-width: 766px) {
+	/*Global*/
+	html, body { max-width: 100%; height: auto; overflow-x: hidden; }
+	.site-content, .widget-area  { width: 100%; float: none; }
+	.banner-rotate { height: 74px; }
+
+	/*Sidebar*/
+	.widget-area { margin-top: 15px; }
+	.server-status { width: 300px; margin: auto; display: block; }
+	.widget, .widget.quick-links { margin-bottom: 0; padding-bottom: 0; }
+	.widget-content { display: none; }
+	.widget ul.widget-content, .widget-content { margin: 10px 0; }
+	.widget h3 { margin-bottom: 0; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;  }
+	.quick-links ul li.right, .quick-links ul li.left { float: none; }
+	.quick-links ul li a { margin: 10px auto!important; }
+
+	/*Roster*/
+	.roster-table { display: block; }
+
+	/*Forums*/
+	li.bbp-forum-info { width: 48%; }
+	#bbpress-forums li.bbp-body li.bbp-forum-freshness { width: 60%; }
+	.bbp-pagination { padding-left: 10px; }
+
+}/*mobile 766*/	
+
+@media all and (max-width: 320px) {
+	/*Global*/
+	html, body { max-width: 320px; }
+	.banner-rotate { height: 56px; background-size: 150%; background-position: center; }
+	.box-style h2 { margin-bottom: 5px; }
+	.logo-links { width: 100%; }
+	.logo-links a img { width: 21%; }
+	.copyrights { padding: 0 15px; }
+
+	/*Homepage*/
+	.news-text, .news-right { width: 58%; }
+
+	/*News*/
+	.news-right { padding: 10px; }
+	.comments-area textarea, .comments-area input { width: 80%; }
+
+	/*Roster*/
+	.mobile-second, .mobile-fifth { display: none; }
+
+	/*Forums*/
+	.bbpress .page-content .entry-content { padding-left: 0; padding-right: 0; }
+	.bbp-breadcrumb, .bbp-search-form, .subscription-toggle { margin-left: 10px; }
+	.bbp-breadcrumb { margin-right: 10px; }
+	#bbpress-forums div.bbp-search-form { float: left; margin-top: 10px; }
+	li.bbp-topic-voice-count, li.bbp-topic-reply-count { display: none; }
+	#bbpress-forums li.bbp-body li.bbp-topic-freshness, #bbpress-forums li.bbp-header li.bbp-topic-freshness { width: 100%; }
+
+}/*mobile 320*/	
