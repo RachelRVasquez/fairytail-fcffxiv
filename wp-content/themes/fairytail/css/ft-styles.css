@@ -391,7 +391,7 @@ a.btn-vote { background-color: #801817; background: url("../images/bgs/bg_stripe
 
 /*==== Raid Index ====*/
 .site-content.raid-page { width: 100%; }
-.raid-menu-wrapper { overflow: hidden; }2
+.raid-menu-wrapper { overflow: hidden; }
 #raid-menu { list-style: none; }
 #raid-menu li { float: left; background-color: #2d2d2d; background-color: rgba(0, 0, 0, .5); margin-right: 5px;
 padding: 8px 15px; -webkit-box-shadow: 0px -1px 13px 0px #6ECFFF; box-shadow: 0px -1px 13px 0px #6ECFFF;
