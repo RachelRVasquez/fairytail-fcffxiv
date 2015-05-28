@@ -115,7 +115,8 @@ text-shadow: 1px 1px 1px #ffffff; filter: dropshadow(color=#ffffff, offx=1, offy
 .banner-04 { background: url('../images/banners/banner-4.jpg') no-repeat top left; }
 .banner-05 { background: url('../images/banners/banner-5.jpg') no-repeat top left; }
 .banner-06 { background: url('../images/banners/banner-6.jpg') no-repeat top left; }
-.banner-01, .banner-02, .banner-03, .banner-04, .banner-05, .banner-06 { background-size: 100%; }
+.banner-07 { background: url('../images/banners/banner-7.jpg') no-repeat top left; }
+.banner-01, .banner-02, .banner-03, .banner-04, .banner-05, .banner-06, .banner-07 { background-size: 100%; }
 
 /*==== Sidebar ====*/
 .widget { background-color: #333; 
@@ -407,3 +408,6 @@ width: 13%; text-align: center; }
 .dpa-archive-achievements th, .dpa-archive-achievements td { padding: 10px 5px; text-align: center; }
 .dpa-archive-achievements tbody tr.odd td { background-color: #2a2a2a; }
 .dpa-archive-achievements td p { margin: 0; }
+
+/*==== Flexslider ====*/
+.flexslider { background: transparent none repeat scroll 0 0!important; border: 4px solid transparent!important; }
