@@ -108,12 +108,14 @@ text-shadow: 1px 1px 1px #ffffff; filter: dropshadow(color=#ffffff, offx=1, offy
 .logo { right: 0; bottom: 0; }
 .logo img { width: 245px; height: auto; }
 
-.banner-rotate { margin: -10px auto 20px; width: 100%; height: 186px; }
+.banner-rotate { margin: -20px -20px 20px; width: 104.5%; height: 186px; }
 .banner-01 { background: url('../images/banners/banner-1.jpg') no-repeat top left; }
 .banner-02 { background: url('../images/banners/banner-2.jpg') no-repeat top left; }
 .banner-03 { background: url('../images/banners/banner-3.jpg') no-repeat top left; }
 .banner-04 { background: url('../images/banners/banner-4.jpg') no-repeat top left; }
-.banner-01, .banner-02, .banner-03, .banner-04 { background-size: 100%; }
+.banner-05 { background: url('../images/banners/banner-5.jpg') no-repeat top left; }
+.banner-06 { background: url('../images/banners/banner-6.jpg') no-repeat top left; }
+.banner-01, .banner-02, .banner-03, .banner-04, .banner-05, .banner-06 { background-size: 100%; }
 
 /*==== Sidebar ====*/
 .widget { background-color: #333; 
