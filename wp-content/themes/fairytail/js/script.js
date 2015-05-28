@@ -78,9 +78,9 @@ function randOrd() {
 * Last Updated: 3/9/2014
 */
 function characterBanners(){	
-	var bannerClasses = [ 'banner-01', 'banner-02', 'banner-03', 'banner-04' ],
+	var bannerClasses = [ 'banner-01', 'banner-02', 'banner-03', 'banner-04', 'banner-05', 'banner-06', 'banner-07' ],
 		leftClasses = [ 'left-01', 'left-02', 'left-03', 'left-04', 'left-05', 'left-06', 'left-07', 'left-08', 'left-09','left-10', 'left-11', 'left-12', 'left-13', 'left-14' ],
-		rightClasses = [ 'right-01', 'right-02', 'right-03', 'right-04', 'right-05', 'right-06', 'right-07', 'right-08', 'right-09', 'right-10', 'right-11', 'right-12', 'right-13', 'right-14' ];
+		rightClasses = [ 'right-01', 'right-02', 'right-03', 'right-04', 'right-05', 'right-06', 'right-07', 'right-08', 'right-09', 'right-10', 'right-11', 'right-12', 'right-13', 'right-14', 'right-15', 'right-16' ];
 		
 	bannerClasses.sort( randOrd );
 	leftClasses.sort( randOrd );
