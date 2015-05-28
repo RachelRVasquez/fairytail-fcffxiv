@@ -403,7 +403,7 @@ width: 13%; text-align: center; }
 
 /*==== Achievements ====*/
 #dpa-achievements { color: #fff; }
-.dpa-archive-achievements thead th, .dpa-archive-achievements tfoot th { background-color: #890e14; }
+.dpa-archive-achievements thead th, .dpa-archive-achievements tfoot th { background-color: #003b89; }
 .dpa-archive-achievements th, .dpa-archive-achievements td { padding: 10px 5px; text-align: center; }
 .dpa-archive-achievements tbody tr.odd td { background-color: #2a2a2a; }
 .dpa-archive-achievements td p { margin: 0; }
