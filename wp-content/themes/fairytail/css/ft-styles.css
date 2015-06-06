@@ -63,6 +63,7 @@ font-family: 'ABeeZee', sans-serif;
 .right-14 { background: url('../images/right-banner/right-14.png') no-repeat top left; }
 .right-15 { background: url('../images/right-banner/right-15.png') no-repeat top left; }
 .right-16 { background: url('../images/right-banner/right-16.png') no-repeat top left; }
+.right-17 { background: url('../images/right-banner/right-17.png') no-repeat top left; }
 
 .middle-content { width: 100%; padding: 20px;
 background-color: #2d2d2d; background-color: rgba(0, 0, 0, .5); 
@@ -315,6 +316,7 @@ background: url('../images/bgs/bg_paper.jpg') repeat; }
 .roster-table tr td span.acn { background-position: -200px -150px; } 
 .roster-table tr td span.sch { background-position: -300px -150px; } 
 .roster-table tr td span.smn { background-position: -250px -150px;; }
+.roster-table tr td span.nin { background-position: -0px -200px; }
 
 .roster-table tr td.company span { width: 50px; height: 60px; background: url('../images/sprite_companies.png') no-repeat; }
 .roster-table tr td span.maelstrom { background-position: 0 0; }
