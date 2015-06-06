@@ -182,10 +182,12 @@ border-bottom: 1px solid #000; -webkit-box-shadow: 0 8px 13px -6px #777; box-sha
 .widget.member-tools ul li a.btn-groups { background: url('../images/buttons/btn-chat.png') no-repeat top left; }
 .widget.member-tools ul li a.btn-achievements { background: url('../images/buttons/btn-achievements.png') no-repeat top left; }
 .widget.member-tools ul li a.btn-twitch{ background: url('../images/buttons/btn-twitch.png') no-repeat top left; }
+.widget.member-tools ul li a.btn-srank { background: url('../images/buttons/btn-srank.png') no-repeat top left; }
 .widget.member-tools ul li a.btn-mom{ background: url('../images/buttons/btn-mom.png') no-repeat top left; }
 .widget.member-tools ul li a.btn-login:hover, .widget.member-tools ul li a.btn-apply:hover, 
 .widget.member-tools ul li a.btn-memsearch:hover, .widget.member-tools ul li a.btn-groups:hover,
 .widget.member-tools ul li a.btn-achievements:hover, .member-tools ul li a.btn-twitch:hover,
+.member-tools ul li a.btn-srank:hover,
 .widget.member-tools ul li a.btn-mom:hover { background-position: bottom left; }
 
 #dpa-redemption-form label, #dpa-redemption-submit { font-size: 12px; }
@@ -413,3 +415,7 @@ width: 13%; text-align: center; }
 
 /*==== Flexslider ====*/
 .flexslider { background: transparent none repeat scroll 0 0!important; border: 4px solid transparent!important; }
+
+/*==== Watu Quiz (plugin) ====*/
+.quiz-area { background-color: #fff; padding: 10px; }
+.quiz-area ul, .quiz-area label, .quiz-area p { font-size: 13px; line-height: 16px; color: #222; }
