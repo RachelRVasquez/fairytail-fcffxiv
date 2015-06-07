@@ -335,8 +335,9 @@ background: url('../images/bgs/bg_paper.jpg') repeat; }
 
 /*==== News ====*/
 .archive .news-post { margin-bottom: 20px; }
-.news-left { width: 173px; height: auto; }
-.news-right { width: 325px; padding: 0 0 15px; }
+.news-left { height: auto; }
+.news-left img { margin: auto; display: block; max-width: 100%; }
+.news-right { padding: 0 0 15px; }
 .news-post h2, .news-post h2 a { background: none; padding: 0 0 5px; margin: 15px 0 0; box-shadow: none; -webkit-box-shadow: none; border: none; }
 .news-post p.entry-date { padding: 0; margin: 2px 0 0; color: #ccc; font-size: 14px; line-height: 14px; }
 .news-post .entry-content p { padding: 5px 0; }
