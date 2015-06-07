@@ -67,9 +67,9 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
    ========================================================================== */
 
 a, p a, .top-wrapper a, .top-wrapper span a, .top-wrapper p a, .top-wrapper h3 a, .top-wrapper h2 a,
-SPAN.date a { color: #fff; border: none; text-decoration: none; }
+SPAN.date a { color: #ffd200; border: none; text-decoration: none; }
 a:visited, p a:visited, .top-wrapper a:visited, .top-wrapper p a:visited, .top-wrapper h3 a:visited, .top-wrapper h2 a:visited,
-SPAN.date a:visited { color: #fff; }
+SPAN.date a:visited { color: #ffd200; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover, a:active, p a:hover, p a:active,
