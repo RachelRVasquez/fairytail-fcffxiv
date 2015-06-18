@@ -29,6 +29,14 @@ width: 100%; height: 100%;
 background-size: 100%; 
 font-family: 'ABeeZee', sans-serif;
 }
+.grand-magic-games { background: url('../images/bgs/bg-grand-magic-games.png') no-repeat top center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width: 100%; height: 100%;
+background-size: 100%; 
+}
 .wrapper { width: 100%; max-width: 980px; }
 .left-banner, .right-banner { height: 810px; top: 100px; }
 .left-banner { left: -250px; width: 885px; }
@@ -92,7 +100,8 @@ html, body { height: 100%; }
 /*==== Header ====*/
 .site-header { width: 924px; margin-top: 10px; z-index: 100; }
 .site-header h1 { padding: 0; margin: 0; }
-.site-header h1 a { display: block; background:url('../images/banners/banner.png') no-repeat top left; width: 100%; height: 295px; }
+.site-header h1 a { display: block; background: url('../images/banners/banner.png') no-repeat top left; width: 100%; height: 295px; }
+.grand-magic-games .site-header h1 a { background: url('../images/banners/banner-gmg.png') no-repeat top center; background-size: 300px; }
 .main-navigation { height: 42px; }
 .main-menu { overflow: hidden; }
 .main-menu > li { float: left; margin: 0 8px; }

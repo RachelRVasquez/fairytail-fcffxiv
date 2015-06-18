@@ -462,11 +462,23 @@ function recent_bbpress_topics(){
 add_action('bbp_template_after_forums_loop','recent_bbpress_topics');
 
 // Add New label to BBPress Topics
-function rk_new_topics() {
+function ft_new_topics() {
 $offset = 60*60*1; 
  
    if ( get_post_time() > date('U') - $offset )
       echo '<span class="new">[New]</span>';
 }
  
-add_action( 'bbp_theme_before_topic_title', 'rk_new_topics' );
+add_action( 'bbp_theme_before_topic_title', 'ft_new_topics' );
+
+// Add specific CSS class by filter
+function ft_body_classes( $classes ) {
+	if( is_page_template('page-templates/games-page.php') ){
+		// add 'class-name' to the $classes array
+		$classes[] = 'grand-magic-games';
+		// return the $classes array
+		return $classes;
+	}
+}
+add_filter( 'body_class', 'ft_body_classes' );
+
