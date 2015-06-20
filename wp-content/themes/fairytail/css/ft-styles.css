@@ -439,3 +439,13 @@ width: 13%; text-align: center; }
 /*==== Watu Quiz (plugin) ====*/
 .quiz-area { background-color: #fff; padding: 10px; }
 .quiz-area ul, .quiz-area label, .quiz-area p { font-size: 13px; line-height: 16px; color: #222; }
+
+/*==== Grand Magic Games ====*/
+.btn-chall { background: url('../images/sprite-gmg-challenges.png') no-repeat; height: 29px; width: 400px; text-indent: -9999px; border: none;
+border-bottom: 4px solid #760303; margin-bottom: 20px; }
+.btn-chall-one { background-position: 0 0; }
+.btn-chall-two { background-position: 0 -55px; }
+.btn-chall-three { background-position: 0 -110px; }
+.btn-chall-four { background-position: 0 -164px; }
+.btn-chall-five { background-position: 0 -219px; }
+.btn-chall:hover { -webkit-filter: grayscale(100%); filter: grayscale(100%); border-color: #111; }
