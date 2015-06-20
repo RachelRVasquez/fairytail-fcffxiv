@@ -18,6 +18,25 @@ get_header(); ?>
 		<div id="content" role="main">
       <div class="gmg-wrap">
         <button role="button" name="challenge-trigger-one" class="btn-chall btn-chall-one">Challenges of the Warrior</button>
+        <table class="gmg-table">
+          <colgroup>
+              <col width=""/>
+              <col width=""/>
+          </colgroup>
+          <thead>
+              <tr>
+                  <th class="mobile-first">Challenge</th>
+                  <th class="mobile-second">Description</th>
+                  <th class="mobile-second">Achievement</th>
+              </tr>
+          </thead>
+          <tbody>
+              <td class="mobile-first">Some name here</td>
+              <td class="mobile-second">Gotta do all this stuff man</td>
+              <td class="mobile-second">Get achievement info here? how?</td>
+          </tbody>
+        </table>
+
         <button role="button" name="challenge-trigger-two" class="btn-chall btn-chall-two float-right">Challenges of the Artisan</button>
         <div class="clear"></div>
         <button role="button" name="challenge-trigger-three" class="btn-chall btn-chall-three">Challenges of the Gatherer</button>
