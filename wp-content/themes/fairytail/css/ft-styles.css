@@ -9,7 +9,7 @@ Styles to build the custom theme from blankslate.
 /*==== Global Classes ====*/
 .overflow { overflow:hidden; }
 .clear { clear: both; }
-.btn-class { display:block; text-decoration:none; border:none; cursor:pointer; }
+.btn-class { display:block; text-decoration:none; border:none; }
 .text-indent { text-indent: -9999px; *font-size: 0; *line-height: 0; }
 .float-left { float: left; }
 .float-right { float: right; }
@@ -176,20 +176,20 @@ border-bottom: 1px solid #000; -webkit-box-shadow: 0 8px 13px -6px #777; box-sha
 .widget.server-stats td { color: #222; }
 
 .widget.member-tools ul { margin-left: 8px; }
-.widget.member-tools ul li a { width: 205px; height: 56px; }
-.widget.member-tools ul li a.btn-login { background: url('../images/buttons/btn-login.png') no-repeat top left; }
-.widget.member-tools ul li a.btn-apply { background: url('../images/buttons/btn-apply.png') no-repeat top left; }
-.widget.member-tools ul li a.btn-memsearch { background: url('../images/buttons/btn-search.png') no-repeat top left; }
-.widget.member-tools ul li a.btn-groups { background: url('../images/buttons/btn-chat.png') no-repeat top left; }
-.widget.member-tools ul li a.btn-achievements { background: url('../images/buttons/btn-achievements.png') no-repeat top left; }
-.widget.member-tools ul li a.btn-twitch{ background: url('../images/buttons/btn-twitch.png') no-repeat top left; }
-.widget.member-tools ul li a.btn-srank { background: url('../images/buttons/btn-srank.png') no-repeat top left; }
-.widget.member-tools ul li a.btn-mom{ background: url('../images/buttons/btn-mom.png') no-repeat top left; }
-.widget.member-tools ul li a.btn-login:hover, .widget.member-tools ul li a.btn-apply:hover, 
-.widget.member-tools ul li a.btn-memsearch:hover, .widget.member-tools ul li a.btn-groups:hover,
-.widget.member-tools ul li a.btn-achievements:hover, .member-tools ul li a.btn-twitch:hover,
+.widget.member-tools ul li .btn-class { width: 205px; height: 56px; }
+.widget.member-tools ul li .btn-login { background: url('../images/buttons/btn-login.png') no-repeat top left; }
+.widget.member-tools ul li .btn-apply { background: url('../images/buttons/btn-apply.png') no-repeat top left; }
+.widget.member-tools ul li .btn-memsearch { background: url('../images/buttons/btn-search.png') no-repeat top left; }
+.widget.member-tools ul li .btn-groups { background: url('../images/buttons/btn-chat.png') no-repeat top left; }
+.widget.member-tools ul li .btn-achievements { background: url('../images/buttons/btn-achievements.png') no-repeat top left; }
+.widget.member-tools ul li .btn-twitch{ background: url('../images/buttons/btn-twitch.png') no-repeat top left; }
+.widget.member-tools ul li .btn-srank { background: url('../images/buttons/btn-srank.png') no-repeat top left; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+.widget.member-tools ul li .btn-mom{ background: url('../images/buttons/btn-mom.png') no-repeat top left; }
+.widget.member-tools ul li .btn-login:hover, .widget.member-tools ul li .btn-apply:hover, 
+.widget.member-tools ul li .btn-memsearch:hover, .widget.member-tools ul li .btn-groups:hover,
+.widget.member-tools ul li .btn-achievements:hover, .member-tools ul li .btn-twitch:hover,
 .member-tools ul li a.btn-srank:hover,
-.widget.member-tools ul li a.btn-mom:hover { background-position: bottom left; }
+.widget.member-tools ul li .btn-mom:hover { background-position: bottom left; }
 
 #dpa-redemption-form label, #dpa-redemption-submit { font-size: 12px; }
 #dpa-redemption-submit { margin: 10px 0 0; }

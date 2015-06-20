@@ -36,7 +36,7 @@ if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) )
               <li><a href="<?php echo esc_url( home_url( '/achievements' ) ); ?>" class="btn-class text-indent btn-achievements">Achievement List</a>
               <li><a href="<?php echo esc_url( home_url( '/member-of-the-month' ) ); ?>" class="btn-class text-indent btn-mom">Member of the Month</a>
               <li><a href="<?php echo esc_url( home_url( '/twitch_page/fairy-tail-twitch-tv/' ) ); ?>" class="btn-class text-indent btn-twitch">Fairy Tail Twitch</a>
-              <li><a href="<?php echo esc_url( home_url( '/srank/' ) ); ?>" class="btn-class text-indent btn-srank">S-Rank Exam</a>
+              <li><div class="btn-class text-indent btn-srank">S-Rank Exam</div>
           </ul>
         </aside>
         
