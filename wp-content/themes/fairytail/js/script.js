@@ -16,6 +16,11 @@ $(window).load(function() {
 	if($('body').hasClass('home')){
 		homeSlider();
 	}
+
+	/*Grand magic games*/
+	if($('body').hasClass('grand-magic-games')){
+		GmgTaskModal();
+	}
 });//end of window load
 
 /*
@@ -105,6 +110,17 @@ function characterBanners(){
 * Last Updated: 3/9/2014
 */
 function homeSlider(){
+	$('.flexslider').flexslider({
+		animation: "slide"
+	});
+}
+
+/*
+* @GmgTaskModal()
+* Notes: Grand Magic Games Tasks
+* Last Updated: 6/21/2015
+*/
+function GmgTaskModal(){
 	$('.flexslider').flexslider({
 		animation: "slide"
 	});

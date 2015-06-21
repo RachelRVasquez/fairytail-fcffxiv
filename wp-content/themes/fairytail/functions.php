@@ -128,6 +128,10 @@ function twentytwelve_scripts_styles() {
 	wp_enqueue_style( 'flex-slider-styles', get_template_directory_uri() . '/css/flexslider.css' );
 	wp_enqueue_style( 'mobile-styles', get_template_directory_uri() . '/css/mobile.css' );
 
+	if( is_page('grand-magic-games') ){
+		wp_enqueue_style( 'full-page-modal-css', get_template_directory_uri(). '/css/animate.min.css');
+	}
+
 	/*
 	 * Loads the Internet Explorer specific stylesheet. You could however just hook into the html class that modernizr adds.
 	 */
@@ -400,8 +404,10 @@ function blankSlate_load_javascript_files() {
 	wp_register_script( 'site-script', get_template_directory_uri() . '/js/script.js', array('jquery') );
 	wp_register_script( 'modernizer', get_template_directory_uri() . '/js/modernizr-2.5.3.min.js', false, false, true );
 	wp_register_script( 'home-page-main-flex-slider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', false, true );
+	wp_register_script('full-screen-modal', get_template_directory_uri() . '/js/animatedModal.min.js', false, true );
 
 	wp_enqueue_script('jquery');
+
 	if ( is_page('roster')) {
 		wp_enqueue_script('jquery-ui');
 	}
@@ -410,6 +416,10 @@ function blankSlate_load_javascript_files() {
   
 	if ( is_front_page() ) {
 		wp_enqueue_script('home-page-main-flex-slider');
+	}
+
+	if( is_page('grand-magic-games') ){
+		wp_enqueue_script('full-screen-modal');
 	}
 }
 

@@ -19,6 +19,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
       <div class="gmg-wrap">
+        <!-- == WARRIOR ===================================== -->
         <button role="button" name="challenge-trigger-one" class="btn-chall btn-chall-one">Challenges of the Warrior</button>
         <table class="gmg-table warrior-table">
           <colgroup>
@@ -39,7 +40,23 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
               $ach_id = intval($war_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'>" . $war_entry['challenge_entry_challenge_name'][1] . "</td>";
+              echo "<td class='mobile-first'>" . $war_entry['challenge_entry_challenge_name'][1]; ?>
+              <!--Call your modal-->
+              <a id="demo01" href="#animatedModal">DEMO01</a>
+           
+              <!--DEMO01-->
+              <div id="animatedModal">
+                  <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+                  <div class="close-animatedModal"> 
+                      CLOSE MODAL
+                  </div>
+                      
+                  <div class="modal-content">
+                            <!--Your modal content goes here-->
+                  </div>
+              </div>
+              <?php
+              echo "</td>";
               echo "<td class='mobile-second'>" . $war_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
@@ -48,7 +65,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           ?>
           </tbody>
         </table>
-
+        <!-- == ARTISAN ===================================== -->
         <button role="button" name="challenge-trigger-two" class="btn-chall btn-chall-two float-right">Challenges of the Artisan</button>
         <div class="clear"></div>
         <table class="gmg-table artisan-table overflow float-right">
@@ -79,13 +96,120 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           ?>
           </tbody>
         </table>
-
+        <!-- == GATHERER ===================================== -->
         <button role="button" name="challenge-trigger-three" class="btn-chall btn-chall-three">Challenges of the Gatherer</button>
+        <table class="gmg-table gatherer-table">
+          <colgroup>
+              <col width=""/>
+              <col width=""/>
+          </colgroup>
+          <thead>
+              <tr>
+                  <th class="mobile-first">Challenge</th>
+                  <th class="mobile-second">Description</th>
+                  <th class="mobile-third">Achievement</th>
+              </tr>
+          </thead>
+          <tbody>
+          <?php
+          foreach($chall_entries as $gath_entry): //gatherer challenges only
+            if( $gath_entry['challenge_entry_challenge_type'][1] == 'Gatherer' ):
+              $ach_id = intval($gath_entry['challenge_entry_achievement_id'][1]);
+              $ach_link = get_the_permalink($ach_id);
+              echo "<tr>";  
+              echo "<td class='mobile-first'>" . $gath_entry['challenge_entry_challenge_name'][1] . "</td>";
+              echo "<td class='mobile-second'>" . $gath_entry['challenge_entry_challenge_desc'][1] . "</td>";
+              echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
+              echo "</tr>";
+            endif;
+          endforeach;
+          ?>
+          </tbody>
+        </table>
+        <!-- == COLLECTOR ===================================== -->
         <button role="button" name="challenge-trigger-four" class="btn-chall btn-chall-four float-right">Challenges of the Collector</button>
         <div class="clear"></div>
+        <table class="gmg-table collector-table overflow float-right">
+          <colgroup>
+              <col width=""/>
+              <col width=""/>
+          </colgroup>
+          <thead>
+              <tr>
+                  <th class="mobile-first">Challenge</th>
+                  <th class="mobile-second">Description</th>
+                  <th class="mobile-third">Achievement</th>
+              </tr>
+          </thead>
+          <tbody>
+          <?php
+          foreach($chall_entries as $coll_entry): //collector challenges only
+            if( $coll_entry['challenge_entry_challenge_type'][1] == 'Collector' ):
+              $ach_id = intval($coll_entry['challenge_entry_achievement_id'][1]);
+              $ach_link = get_the_permalink($ach_id);
+              echo "<tr>";  
+              echo "<td class='mobile-first'>" . $coll_entry['challenge_entry_challenge_name'][1] . "</td>";
+              echo "<td class='mobile-second'>" . $coll_entry['challenge_entry_challenge_desc'][1] . "</td>";
+              echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
+              echo "</tr>";
+            endif;
+          endforeach;
+          ?>
+          </tbody>
+        </table>
+        <!-- == PAST ===================================== -->
         <button role="button" name="challenge-trigger-five" class="btn-chall btn-chall-five">Challenges of the Past</button>
+        <table class="gmg-table past-table">
+          <thead>
+              <tr>
+                  <th class="mobile-first">Challenge</th>
+                  <th class="mobile-second">Description</th>
+                  <th class="mobile-third">Achievement</th>
+              </tr>
+          </thead>
+          <tbody>
+          <?php
+          foreach($chall_entries as $past_entry): //past challenges only
+            if( $past_entry['challenge_entry_challenge_type'][1] == 'Collector' ):
+              $ach_id = intval($past_entry['challenge_entry_achievement_id'][1]);
+              $ach_link = get_the_permalink($ach_id);
+              echo "<tr>";  
+              echo "<td class='mobile-first'>" . $past_entry['challenge_entry_challenge_name'][1] . "</td>";
+              echo "<td class='mobile-second'>" . $past_entry['challenge_entry_challenge_desc'][1] . "</td>";
+              echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
+              echo "</tr>";
+            endif;
+          endforeach;
+          ?>
+          </tbody>
+        </table>
+        <!-- == CARDS ===================================== -->
         <button role="button" name="challenge-trigger-six" class="btn-chall btn-chall-six float-right">Challenges of the Cards</button>
         <div class="clear"></div>
+        <table class="gmg-table past-table overflow float-right">
+          <thead>
+              <tr>
+                  <th class="mobile-first">Challenge</th>
+                  <th class="mobile-second">Description</th>
+                  <th class="mobile-third">Achievement</th>
+              </tr>
+          </thead>
+          <tbody>
+          <?php
+          foreach($chall_entries as $cards_entry): //cards challenges only
+            if( $cards_entry['challenge_entry_challenge_type'][1] == 'Collector' ):
+              $ach_id = intval($cards_entry['challenge_entry_achievement_id'][1]);
+              $ach_link = get_the_permalink($ach_id);
+              echo "<tr>";  
+              echo "<td class='mobile-first'>" . $cards_entry['challenge_entry_challenge_name'][1] . "</td>";
+              echo "<td class='mobile-second'>" . $cards_entry['challenge_entry_challenge_desc'][1] . "</td>";
+              echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
+              echo "</tr>";
+            endif;
+          endforeach;
+          ?>
+          </tbody>
+        </table>
 		  </div><!--gmg-wrap-->
 		</div><!-- #content -->
 	</div><!-- #primary -->
