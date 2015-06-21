@@ -444,10 +444,11 @@ width: 13%; text-align: center; }
 .btn-chall { background: url('../images/sprite-gmg-challenges.png') no-repeat; height: 29px; width: 600px; text-indent: -9999px; border: none;
 border-bottom: 4px solid #760303; margin-bottom: 20px; }
 .btn-chall-one { background-position: 0 0; }
-.btn-chall-two { background-position: 0 -55px; }
+.btn-chall-two { background-position: 352px -55px; }
 .btn-chall-three { background-position: 0 -110px; }
-.btn-chall-four { background-position: 0 -164px; }
+.btn-chall-four { background-position: 329px -164px; }
 .btn-chall-five { background-position: 0 -219px; }
+.btn-chall-six { background-position: 371px -272px; }
 .btn-chall:hover { -webkit-filter: grayscale(100%); filter: grayscale(100%); border-color: #111; }
 
 /* Copied from roster bc no modular == lazy */
@@ -468,5 +469,6 @@ text-shadow: 1px 1px 0px #000; filter: dropshadow(color=#182e36, offx=1, offy=1)
 .gmg-table tr td { background-color: #fafafa; border-left: 1px solid #888;
 background: url('../images/bgs/bg_paper.jpg') repeat; padding: 5px 1%; }
 .gmg-table tr th:first-child, .gmg-table tr td:first-child { border-left: none; }
+.gmg-table tr td p { color: #000; }
 .gmg-table tr td a, .gmg-table tr td a:visited { color: #2d2d2d; text-decoration:underline; }
 .gmg-table tr td a:hover { color: #FFD200; }
