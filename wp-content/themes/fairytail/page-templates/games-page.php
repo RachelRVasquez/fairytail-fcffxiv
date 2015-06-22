@@ -18,14 +18,10 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
-      <div class="gmg-wrap">
+      <div class="gmg-wrap remodal-bg">
         <!-- == WARRIOR ===================================== -->
         <button role="button" name="challenge-trigger-one" class="btn-chall btn-chall-one">Challenges of the Warrior</button>
         <table class="gmg-table warrior-table">
-          <colgroup>
-              <col width=""/>
-              <col width=""/>
-          </colgroup>
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
@@ -40,23 +36,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
               $ach_id = intval($war_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'>" . $war_entry['challenge_entry_challenge_name'][1]; ?>
-              <!--Call your modal-->
-              <a id="demo01" href="#animatedModal">DEMO01</a>
-           
-              <!--DEMO01-->
-              <div id="animatedModal">
-                  <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
-                  <div class="close-animatedModal"> 
-                      CLOSE MODAL
-                  </div>
-                      
-                  <div class="modal-content">
-                            <!--Your modal content goes here-->
-                  </div>
-              </div>
-              <?php
-              echo "</td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='warrior-modal'>" . $war_entry['challenge_entry_challenge_name'][1] . "</a></td>";
               echo "<td class='mobile-second'>" . $war_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
@@ -69,10 +49,6 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
         <button role="button" name="challenge-trigger-two" class="btn-chall btn-chall-two float-right">Challenges of the Artisan</button>
         <div class="clear"></div>
         <table class="gmg-table artisan-table overflow float-right">
-          <colgroup>
-              <col width=""/>
-              <col width=""/>
-          </colgroup>
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
@@ -87,7 +63,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
               $ach_id = intval($art_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'>" . $art_entry['challenge_entry_challenge_name'][1] . "</td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='artisan-modal'>" . $art_entry['challenge_entry_challenge_name'][1] . "</a></td>";
               echo "<td class='mobile-second'>" . $art_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
@@ -99,10 +75,6 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
         <!-- == GATHERER ===================================== -->
         <button role="button" name="challenge-trigger-three" class="btn-chall btn-chall-three">Challenges of the Gatherer</button>
         <table class="gmg-table gatherer-table">
-          <colgroup>
-              <col width=""/>
-              <col width=""/>
-          </colgroup>
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
@@ -117,7 +89,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
               $ach_id = intval($gath_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'>" . $gath_entry['challenge_entry_challenge_name'][1] . "</td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='gatherer-modal'>" . $gath_entry['challenge_entry_challenge_name'][1] . "</a></td>";
               echo "<td class='mobile-second'>" . $gath_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
@@ -130,10 +102,6 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
         <button role="button" name="challenge-trigger-four" class="btn-chall btn-chall-four float-right">Challenges of the Collector</button>
         <div class="clear"></div>
         <table class="gmg-table collector-table overflow float-right">
-          <colgroup>
-              <col width=""/>
-              <col width=""/>
-          </colgroup>
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
@@ -148,7 +116,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
               $ach_id = intval($coll_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'>" . $coll_entry['challenge_entry_challenge_name'][1] . "</td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='collector-modal'>" . $coll_entry['challenge_entry_challenge_name'][1] . "</a></td>";
               echo "<td class='mobile-second'>" . $coll_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
@@ -174,7 +142,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
               $ach_id = intval($past_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'>" . $past_entry['challenge_entry_challenge_name'][1] . "</td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='past-modal'>" . $past_entry['challenge_entry_challenge_name'][1] . "</a></td>";
               echo "<td class='mobile-second'>" . $past_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
@@ -197,11 +165,11 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <tbody>
           <?php
           foreach($chall_entries as $cards_entry): //cards challenges only
-            if( $cards_entry['challenge_entry_challenge_type'][1] == 'Collector' ):
+            if( $cards_entry['challenge_entry_challenge_type'][1] == 'Cards' ):
               $ach_id = intval($cards_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'>" . $cards_entry['challenge_entry_challenge_name'][1] . "</td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='cards-modal'>" . $cards_entry['challenge_entry_challenge_name'][1] . "</a></td>";
               echo "<td class='mobile-second'>" . $cards_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
@@ -211,6 +179,73 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           </tbody>
         </table>
 		  </div><!--gmg-wrap-->
+
+      <div class="remodal" data-remodal-id="warrior-modal" role="dialog">
+        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+        <div class="remodal-content">
+          <table class="gmg-table past-table overflow float-right">
+            <thead>
+                <tr>
+                    <th class="mobile-first">Task</th>
+                    <th class="mobile-second">Description</th>
+                    <th class="mobile-third">Achievement</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+            foreach($chall_entries as $war_task): 
+              if( $war_task['challenge_entry_challenge_type'][1] == 'Warrior' ):
+                $war_task_id = intval($war_task['challenge_entry_assign_task'][1]);
+                echo $war_task_id;
+                $members = get_group('gmg_tasks',$post_id=$war_task_id);
+                foreach($members as $member){
+                  echo $member['task_entry_task_name'][1];
+                }
+
+              endif;
+            endforeach;
+            ?>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+
+      <div class="remodal" data-remodal-id="artisan-modal" role="dialog">
+        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+        <div class="remodal-content">
+          
+        </div>
+      </div>
+
+      <div class="remodal" data-remodal-id="gatherer-modal" role="dialog">
+        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+        <div class="remodal-content">
+          
+        </div>
+      </div>
+
+      <div class="remodal" data-remodal-id="collector-modal" role="dialog">
+        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+        <div class="remodal-content">
+          
+        </div>
+      </div>
+
+      <div class="remodal" data-remodal-id="past-modal" role="dialog">
+        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+        <div class="remodal-content">
+          
+        </div>
+      </div>
+
+      <div class="remodal" data-remodal-id="cards-modal" role="dialog">
+        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+        <div class="remodal-content">
+          
+        </div>
+      </div>
+
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

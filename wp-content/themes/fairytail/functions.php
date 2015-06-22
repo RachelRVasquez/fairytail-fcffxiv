@@ -119,8 +119,8 @@ function twentytwelve_scripts_styles() {
 	/*
 	 * Loads our main stylesheet.
 	 */
-	/*wp_enqueue_style( 'google-font-styles', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Artifika' );*/
-	wp_enqueue_style( 'google-font-styles', 'http://fonts.googleapis.com/css?ABeeZee:400,400italic|Artifika' ); 
+	wp_enqueue_style( 'google-font-styles', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Artifika' );
+	/*wp_enqueue_style( 'google-font-styles', 'http://fonts.googleapis.com/css?ABeeZee:400,400italic|Artifika' );*/ 
 	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'fairytail-styles', get_template_directory_uri() . '/css/ft-styles.css' );
 	wp_enqueue_style( 'ft-buddypress-styles', get_template_directory_uri() . '/css/ft-buddypress.css' );
@@ -129,7 +129,8 @@ function twentytwelve_scripts_styles() {
 	wp_enqueue_style( 'mobile-styles', get_template_directory_uri() . '/css/mobile.css' );
 
 	if( is_page('grand-magic-games') ){
-		wp_enqueue_style( 'full-page-modal-css', get_template_directory_uri(). '/css/animate.min.css');
+		wp_enqueue_style( 're-modal-css', get_template_directory_uri(). '/css/remodal.css');
+		wp_enqueue_style( 're-modal-theme-css', get_template_directory_uri(). '/css/remodal-default-theme.css');
 	}
 
 	/*
@@ -398,29 +399,31 @@ function twentytwelve_customize_preview_js() {
 function blankSlate_load_javascript_files() {
 
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', false, '1.8.3');
-	wp_register_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', false, '1.8.3');
+	wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '1.11.3');
+	wp_register_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', false, '1.11.3');
 
-	wp_register_script( 'site-script', get_template_directory_uri() . '/js/script.js', array('jquery') );
 	wp_register_script( 'modernizer', get_template_directory_uri() . '/js/modernizr-2.5.3.min.js', false, false, true );
-	wp_register_script( 'home-page-main-flex-slider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', false, true );
-	wp_register_script('full-screen-modal', get_template_directory_uri() . '/js/animatedModal.min.js', false, true );
+	wp_register_script( 'home-page-main-flex-slider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery') );
+	wp_register_script('re-modal-script', get_template_directory_uri() . '/js/remodal.js', array('jquery') );
+	wp_register_script( 'site-script', get_template_directory_uri() . '/js/script.js', array('jquery') );
 
 	wp_enqueue_script('jquery');
 
 	if ( is_page('roster')) {
 		wp_enqueue_script('jquery-ui');
 	}
-	wp_enqueue_script('site-script');
-	wp_enqueue_script('modernizer');
-  
+
+	if( is_page('grand-magic-games') ){
+		wp_enqueue_script('re-modal-script');
+	}
+
 	if ( is_front_page() ) {
 		wp_enqueue_script('home-page-main-flex-slider');
 	}
 
-	if( is_page('grand-magic-games') ){
-		wp_enqueue_script('full-screen-modal');
-	}
+	wp_enqueue_script('site-script');
+	wp_enqueue_script('modernizer');
+	
 }
 
 add_action( 'wp_enqueue_scripts', 'blankSlate_load_javascript_files' );

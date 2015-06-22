@@ -8,6 +8,11 @@ $(document).ready(function($) {
 	/*Mobile*/
 	mobileMenu();
 	mobileClasses();
+
+	/*Grand magic games*/
+	//if($('body').hasClass('grand-magic-games')){
+
+	//}
 	
 });//end of doc ready
 
@@ -15,11 +20,6 @@ $(window).load(function() {
 	/*Homepage*/
 	if($('body').hasClass('home')){
 		homeSlider();
-	}
-
-	/*Grand magic games*/
-	if($('body').hasClass('grand-magic-games')){
-		GmgTaskModal();
 	}
 });//end of window load
 
@@ -113,18 +113,7 @@ function homeSlider(){
 	$('.flexslider').flexslider({
 		animation: "slide"
 	});
-}
-
-/*
-* @GmgTaskModal()
-* Notes: Grand Magic Games Tasks
-* Last Updated: 6/21/2015
-*/
-function GmgTaskModal(){
-	$('.flexslider').flexslider({
-		animation: "slide"
-	});
-}		  
+}	  
 
 /*
 * Notes: Written by Sam Deering, for drag/touch support
