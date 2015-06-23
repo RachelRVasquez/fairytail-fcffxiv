@@ -466,9 +466,14 @@ background: linear-gradient(to bottom,  rgba(38,38,38,1) 0%,rgba(86,86,86,1) 100
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', endColorstr='#565656',GradientType=0 ); /* IE6-9 */
 font-family: 'Artifika', Georgia, "Times New Roman", Times, serif; color: #fff;
 text-shadow: 1px 1px 0px #000; filter: dropshadow(color=#182e36, offx=1, offy=1); }
-.gmg-table tr td { background-color: #fafafa; border-left: 1px solid #888;
+.gmg-table tr td { background-color: #fafafa; border-left: 1px solid #888; border-bottom: 1px solid #888;
 background: url('../images/bgs/bg_paper.jpg') repeat; padding: 5px 1%; }
 .gmg-table tr th:first-child, .gmg-table tr td:first-child { border-left: none; }
 .gmg-table tr td p { color: #000; }
 .gmg-table tr td a, .gmg-table tr td a:visited { color: #2d2d2d; text-decoration:underline; }
 .gmg-table tr td a:hover { color: #FFD200; }
+
+.easy-stars, .medium-stars, .hard-stars { background: url('../images/bg-stars.png') no-repeat; height: 30px; }
+.easy-stars { width: 30px; } 
+.medium-stars { width: 70px; } 
+.hard-stars { width: 120px; }
