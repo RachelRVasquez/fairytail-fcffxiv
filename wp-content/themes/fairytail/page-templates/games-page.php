@@ -191,87 +191,27 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
         </table>
 		  </div><!--gmg-wrap-->
 
-      <div class="remodal" data-remodal-id="warrior-modal" role="dialog">
-        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-        <div class="remodal-content">
-          <table class="gmg-table past-table overflow float-right">
-            <thead>
-                <tr>
-                    <th class="mobile-first">Task</th>
-                    <th class="mobile-second">Description</th>
-                    <th class="mobile-second">Difficulty</th>
-                    <th class="mobile-third">Achievement</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php
-            foreach($chall_entries as $war_entry): //warrior challenges only
-              if( $war_entry['challenge_entry_challenge_type'][1] == 'Warrior' ):
-                global $task_post_id;
-                $task_post_id = intval($war_entry['challenge_entry_assign_task'][1]);
 
-              endif;
-            endforeach; 
+      <?php 
+      /* * 
+      * Partials for task modals 
+      */
 
-            /*
-            * Use global ID pulled from challenge group related field
-            * Create another foreach loop to grab the group fields for the tasks
-            */
+      include( locate_template('/partials/gmg-war-modal.php') );
 
-            $warrior_chall_task = get_group('task_entry', $post_id=$task_post_id);
-            foreach($warrior_chall_task as $war_chall_task):
-              $task_ach_id = intval($war_chall_task['task_entry_achievement_id'][1]); //achievement ID
-              $task_ach_link = get_the_permalink($task_ach_id); //achievement link
-              echo "<tr>";  
-              echo "<td class='mobile-first'>" . $war_chall_task['task_entry_task_name'][1] . "</td>";
-              echo "<td class='mobile-second'>" . $war_chall_task['task_entry_task_desc'][1] . "</td>";
-              echo "<td class='mobile-second'><div class='" . $war_chall_task['task_entry_task_difficulty'][1] . "-stars margin-auto'></div></td>";
-              echo "<td class='mobile-third'><a href='" . $task_ach_link . "'>" . get_the_post_thumbnail( $task_ach_id, 'thumbnail' ) . "</a></td>";
-              echo "</tr>"; 
-            endforeach;
-            ?>  
-            </tbody>
-          </table>
-          
-        </div>
-      </div>
+      include( locate_template('/partials/gmg-art-modal.php') );
 
+      include( locate_template('/partials/gmg-gath-modal.php') );
+
+      include( locate_template('/partials/gmg-coll-modal.php') );
+
+      include( locate_template('/partials/gmg-past-modal.php') );
+
+      include( locate_template('/partials/gmg-cards-modal.php') ); 
+
+      ?>
       
-
-      <div class="remodal" data-remodal-id="artisan-modal" role="dialog">
-        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-        <div class="remodal-content">
-          
-        </div>
-      </div>
-
-      <div class="remodal" data-remodal-id="gatherer-modal" role="dialog">
-        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-        <div class="remodal-content">
-          
-        </div>
-      </div>
-
-      <div class="remodal" data-remodal-id="collector-modal" role="dialog">
-        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-        <div class="remodal-content">
-          
-        </div>
-      </div>
-
-      <div class="remodal" data-remodal-id="past-modal" role="dialog">
-        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-        <div class="remodal-content">
-          
-        </div>
-      </div>
-
-      <div class="remodal" data-remodal-id="cards-modal" role="dialog">
-        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-        <div class="remodal-content">
-          
-        </div>
-      </div>
+      
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
