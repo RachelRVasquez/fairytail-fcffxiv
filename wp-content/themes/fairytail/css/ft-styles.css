@@ -206,6 +206,9 @@ border-bottom: 1px solid #000; -webkit-box-shadow: 0 8px 13px -6px #777; box-sha
 .widget_dpa_leaderboard { overflow: hidden; }
 .widget_dpa_leaderboard tbody tr:first-child td { padding-top: 0; }
 .widget_dpa_leaderboard tbody tr td { text-align: center; } 
+div.dpa-template-notice.info { background-color: #222; border-color: #222; }
+#dpa-achievements img { width: 75px; height: 75px; }
+
 
 /*==== Home ====*/
 .home-carousel { clear: both; }

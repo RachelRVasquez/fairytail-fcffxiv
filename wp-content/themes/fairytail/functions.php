@@ -430,49 +430,56 @@ add_action( 'wp_enqueue_scripts', 'blankSlate_load_javascript_files' );
 
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
+/* ==== CUSTOM RACHEL CODE ====== */
+
+/**
+ * Detect plugin. For use on Front End only.
+ */
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
 /* Excerpts */
-function custom_excerpt_length( $length ) {
+function ft_custom_excerpt_length( $length ) {
 	return 20;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'ft_custom_excerpt_length', 999 );
 
-function new_excerpt_more( $more ) {
+function ft_new_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
 }
-add_filter( 'excerpt_more', 'new_excerpt_more' );
+add_filter( 'excerpt_more', 'ft_new_excerpt_more' );
 
 /** BBPress filter to add description after forums titles on forum index */
-function add_bbp_display_forum_description() {
+function ft_add_bbp_display_forum_description() {
     echo '<div class="bbp-forum-content">' ;
     bbp_forum_content() ;
     echo '</div>';
     }
-add_action( 'bbp_template_before_single_forum' , 'add_bbp_display_forum_description' );
+add_action( 'bbp_template_before_single_forum' , 'ft_add_bbp_display_forum_description' );
 
 /* BBPress create vertical list */
-function custom_bbp_sub_forum_list() {
+function ft_custom_bbp_sub_forum_list() {
   $args['separator'] = '<br>';
   return $args;
 }
- add_filter('bbp_before_list_forums_parse_args', 'custom_bbp_sub_forum_list' );
+ add_filter('bbp_before_list_forums_parse_args', 'ft_custom_bbp_sub_forum_list' );
 
 /* BBPress remove topic count */
-function remove_counts() {
+function ft_remove_counts() {
 $args['show_topic_count'] = false;
 $args['show_reply_count'] = false;
 $args['count_sep'] = '';
  return $args;
 }
-add_filter('bbp_before_list_forums_parse_args', 'remove_counts' );
+add_filter('bbp_before_list_forums_parse_args', 'ft_remove_counts' );
 
 
 // Add Recent Topics to BBPress
-function recent_bbpress_topics(){
+function rft_ecent_bbpress_topics(){
  if ( bbp_has_topics( array( 'author' => 0, 'show_stickies' => false, 'order' => 'DESC', 'post_parent' => 'any', 'posts_per_page' => 5 ) ) )
  bbp_get_template_part( 'bbpress/loop', 'topics' );
 }
 // Hook into action
-add_action('bbp_template_after_forums_loop','recent_bbpress_topics');
+add_action('bbp_template_after_forums_loop','ft_recent_bbpress_topics');
 
 // Add New label to BBPress Topics
 function ft_new_topics() {

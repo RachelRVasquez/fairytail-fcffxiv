@@ -1,3 +1,6 @@
+;(function ($, window, document, undefined) {
+  'use strict'; //enable strict mode
+
 $(document).ready(function($) {
 	/*Roster Page*/
 	rosterToggle();
@@ -159,3 +162,5 @@ $.fn.addTouch = function(){
     first.target.dispatchEvent(simulatedEvent);
   };
 };
+
+}(jQuery, window, window.document)); //no conflict wrapper

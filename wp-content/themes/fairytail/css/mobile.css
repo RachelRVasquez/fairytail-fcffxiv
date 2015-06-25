@@ -79,6 +79,7 @@
 @media all and (max-width: 320px) {
 	/*Global*/
 	html, body { max-width: 320px; }
+	body { background-repeat: repeat; }
 	.banner-rotate { height: 56px; background-size: 150%; background-position: center; }
 	.box-style h2 { margin-bottom: 5px; }
 	.logo-links { width: 100%; }
