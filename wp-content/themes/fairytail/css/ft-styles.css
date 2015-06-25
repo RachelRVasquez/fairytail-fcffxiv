@@ -20,13 +20,12 @@ Styles to build the custom theme from blankslate.
 
 /*==== Structure & Fallbacks ====*/
 body { 
-background: url('../images/bgs/bg-heavensward.jpg') no-repeat top center fixed; 
+background: url('../images/bgs/bg-heavensward02.png') no-repeat top center fixed; 
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
 width: 100%; height: 100%;
-background-size: 100%; 
 font-family: 'ABeeZee', sans-serif;
 }
 .grand-magic-games { background: url('../images/bgs/bg-grand-magic-games.png') no-repeat top center fixed; 
@@ -208,7 +207,7 @@ border-bottom: 1px solid #000; -webkit-box-shadow: 0 8px 13px -6px #777; box-sha
 .widget_dpa_leaderboard tbody tr td { text-align: center; } 
 div.dpa-template-notice.info { background-color: #222; border-color: #222; }
 #dpa-achievements img { width: 75px; height: 75px; }
-
+#dpa-achievements th { font-family: 'Artifika', Georgia, "Times New Roman", Times, serif; }
 
 /*==== Home ====*/
 .home-carousel { clear: both; }
