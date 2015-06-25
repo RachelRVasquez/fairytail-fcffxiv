@@ -183,6 +183,8 @@ border-bottom: 1px solid #000; -webkit-box-shadow: 0 8px 13px -6px #777; box-sha
 .quick-links ul li a:hover { opacity: 1; filter: alpha(opacity=100); }
 .widget.server-stats td { color: #222; }
 
+.logged-in-sidebar, .logged-out-sidebar { display: none; }
+
 .widget.member-tools ul { margin-left: 8px; }
 .widget.member-tools ul li a { width: 205px; height: 56px; }
 .widget.member-tools ul li a.btn-login { background: url('../images/buttons/btn-login.png') no-repeat top left; }
