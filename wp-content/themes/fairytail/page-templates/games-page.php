@@ -23,7 +23,10 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
       <div class="gmg-wrap remodal-bg">
 
         <a href='#' data-remodal-target='index-modal'>Index</a>
+        <a href="<?php echo site_url('proof-completion'); ?>">Proof of Completion</a>
+        <a href="<?php echo site_url('challenge-archive'); ?>">Challenge Archive</a>
 
+        <div class="clear"></div>
         <!-- == WARRIOR ===================================== -->
         <button role="button" name="challenge-trigger-one" class="btn-chall btn-chall-one" data-table="warrior-table">Challenges of the Warrior</button>
         <table class="gmg-table warrior-table">

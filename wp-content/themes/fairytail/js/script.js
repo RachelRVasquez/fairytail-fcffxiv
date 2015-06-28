@@ -136,7 +136,17 @@ function challengeToggle(){
 			challengeTable = $('.' + challengeData);
 
 		thisButton.click(function(){
-			challengeTable.fadeToggle();
+			if( challengeTable.is(':visible') ){
+				challengeTable.hide('blind', {
+				  duration: 1000,
+				  easing: 'easeOutBounce', 
+				});
+			} else {
+				challengeTable.show('blind', {
+				  duration: 1000,
+				  easing: 'easeOutBounce', 
+				});
+			}
 		});
 	});	
 }  

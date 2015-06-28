@@ -32,7 +32,7 @@
     <div class="clear"></div>
 	<div class="copyrights">
     <p>Copyright &copy;Hiro Mashima - KODANSHA/Fairy Tail Guild -TV TOKYO. 
-    Copyright &copy; 2010 - 2013 SQUARE ENIX CO., LTD. All Rights Reserved.</p>
+    Copyright &copy; 2010 - 2015 SQUARE ENIX CO., LTD. All Rights Reserved.</p>
     <p>All company, product, system names and/or company logos and marks are the registered trademarks or trademarks of their respective owners.</p>
 	</div>
 </div>
