@@ -16,11 +16,16 @@ get_header();
 $chall_entries = get_group('challenge_entry', $post_id=4602);
 ?>
 
+
+
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
       <div class="gmg-wrap remodal-bg">
+
+        <a href='#' data-remodal-target='index-modal'>Index</a>
+
         <!-- == WARRIOR ===================================== -->
-        <button role="button" name="challenge-trigger-one" class="btn-chall btn-chall-one">Challenges of the Warrior</button>
+        <button role="button" name="challenge-trigger-one" class="btn-chall btn-chall-one" data-table="warrior-table">Challenges of the Warrior</button>
         <table class="gmg-table warrior-table">
           <thead>
               <tr>
@@ -47,7 +52,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           </tbody>
         </table>
         <!-- == ARTISAN ===================================== -->
-        <button role="button" name="challenge-trigger-two" class="btn-chall btn-chall-two float-right">Challenges of the Artisan</button>
+        <button role="button" name="challenge-trigger-two" class="btn-chall btn-chall-two float-right" data-table="artisan-table">Challenges of the Artisan</button>
         <div class="clear"></div>
         <table class="gmg-table artisan-table overflow float-right">
           <thead>
@@ -76,7 +81,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           </tbody>
         </table>
         <!-- == GATHERER ===================================== -->
-        <button role="button" name="challenge-trigger-three" class="btn-chall btn-chall-three">Challenges of the Gatherer</button>
+        <button role="button" name="challenge-trigger-three" class="btn-chall btn-chall-three" data-table="gatherer-table">Challenges of the Gatherer</button>
         <table class="gmg-table gatherer-table">
           <thead>
               <tr>
@@ -104,7 +109,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           </tbody>
         </table>
         <!-- == COLLECTOR ===================================== -->
-        <button role="button" name="challenge-trigger-four" class="btn-chall btn-chall-four float-right">Challenges of the Collector</button>
+        <button role="button" name="challenge-trigger-four" class="btn-chall btn-chall-four float-right" data-table="collector-table">Challenges of the Collector</button>
         <div class="clear"></div>
         <table class="gmg-table collector-table overflow float-right">
           <thead>
@@ -133,7 +138,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           </tbody>
         </table>
         <!-- == PAST ===================================== -->
-        <button role="button" name="challenge-trigger-five" class="btn-chall btn-chall-five">Challenges of the Past</button>
+        <button role="button" name="challenge-trigger-five" class="btn-chall btn-chall-five" data-table="past-table">Challenges of the Past</button>
         <table class="gmg-table past-table">
           <thead>
               <tr>
@@ -161,9 +166,9 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           </tbody>
         </table>
         <!-- == CARDS ===================================== -->
-        <button role="button" name="challenge-trigger-six" class="btn-chall btn-chall-six float-right">Challenges of the Cards</button>
+        <button role="button" name="challenge-trigger-six" class="btn-chall btn-chall-six float-right" data-table="cards-table">Challenges of the Cards</button>
         <div class="clear"></div>
-        <table class="gmg-table past-table overflow float-right">
+        <table class="gmg-table cards-table overflow float-right">
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
@@ -194,8 +199,10 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
 
       <?php 
       /* * 
-      * Partials for task modals 
+      * Partials for task modals & index 
       */
+
+      include( locate_template('/partials/gmg-index-modal.php') );
 
       include( locate_template('/partials/gmg-war-modal.php') );
 

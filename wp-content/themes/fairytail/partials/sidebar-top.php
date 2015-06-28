@@ -7,14 +7,15 @@
 	<aside class="widget member-tools">
 		<h3 class="widget-title">Member Tools</h3>
 		<ul class="widget-content">
-			<li <?php if ( is_user_logged_in() ) { echo 'class="logged-in-sidebar"'; }?> ><a href="<?php echo esc_url( home_url( '/apply' ) ); ?>" class="btn-class text-indent btn-apply">Apply Here</a>
-			<li <?php if ( is_user_logged_in() ) { echo 'class="logged-in-sidebar"'; }?> ><a href="<?php echo esc_url( home_url( '/register' ) ); ?>" class="btn-class text-indent btn-login">Register Here</a>
-			<li><a href="<?php echo esc_url( home_url( '/member-search' ) ); ?>" class="btn-class text-indent btn-memsearch">Member Search</a>
-			<li><a href="<?php echo esc_url( home_url( '/groups' ) ); ?>" class="btn-class text-indent btn-groups">Group Chat</a>
-			<li><a href="<?php echo esc_url( home_url( '/achievements' ) ); ?>" class="btn-class text-indent btn-achievements">Achievement List</a>
-			<li><a href="<?php echo esc_url( home_url( '/member-of-the-month' ) ); ?>" class="btn-class text-indent btn-mom">Member of the Month</a>
-			<li><a href="<?php echo esc_url( home_url( '/twitch_page/fairy-tail-twitch-tv/' ) ); ?>" class="btn-class text-indent btn-twitch">Fairy Tail Twitch</a>
-			<li <?php if ( !is_user_logged_in() ) { echo 'class="logged-out-sidebar"'; }?>><a href="<?php echo esc_url( home_url( '/srank/' ) ); ?>" class="btn-class text-indent btn-srank">S-Rank Exam</a>
+			<li <?php if ( is_user_logged_in() ) { echo 'class="logged-in-sidebar"'; }?> ><a href="<?php echo esc_url( home_url( '/apply' ) ); ?>" class="btn-class text-indent btn-apply">Apply Here</a></li>
+			<li <?php if ( is_user_logged_in() ) { echo 'class="logged-in-sidebar"'; }?> ><a href="<?php echo esc_url( home_url( '/register' ) ); ?>" class="btn-class text-indent btn-login">Register Here</a></li>
+			<li><a href="<?php echo esc_url( home_url( '/member-search' ) ); ?>" class="btn-class text-indent btn-memsearch">Member Search</a></li>
+			<li><a href="<?php echo esc_url( home_url( '/groups' ) ); ?>" class="btn-class text-indent btn-groups">Group Chat</a></li>
+			<li><a href="<?php echo esc_url( home_url( '/achievements' ) ); ?>" class="btn-class text-indent btn-achievements">Achievement List</a></li>
+			<li><a href="<?php echo esc_url( home_url( '/member-of-the-month' ) ); ?>" class="btn-class text-indent btn-mom">Member of the Month</a></li>
+			<li><a href="<?php echo esc_url( home_url( '/twitch_page/fairy-tail-twitch-tv/' ) ); ?>" class="btn-class text-indent btn-twitch">Fairy Tail Twitch</a></li>
+			<li <?php if ( !is_user_logged_in() ) { echo 'class="logged-out-sidebar"'; }?>><a href="<?php echo esc_url( home_url( '/srank' ) ); ?>" class="btn-class text-indent btn-srank">S-Rank Exam</a></li>
+			<li <?php if ( !is_user_logged_in() ) { echo 'class="logged-out-sidebar"'; }?>><a href="<?php echo esc_url( home_url( '/grand-magic-games' ) ); ?>" class="btn-class text-indent btn-gmg">Grand Magic Games</a></li>
 		</ul>
 	</aside>
 

@@ -13,9 +13,11 @@ $(document).ready(function($) {
 	mobileClasses();
 
 	/*Grand magic games*/
-	//if($('body').hasClass('grand-magic-games')){
+	var $body = $('body');
 
-	//}
+	if($body.hasClass('grand-magic-games')){
+		challengeToggle();
+	}
 	
 });//end of doc ready
 
@@ -116,7 +118,28 @@ function homeSlider(){
 	$('.flexslider').flexslider({
 		animation: "slide"
 	});
-}	  
+}	
+
+/*
+* @challengeToggle()
+* Notes: Grand Magic Games, hide/show tables
+* Based on data-table button attribute and table class
+* Last Updated: 6/28/2015
+*/
+function challengeToggle(){
+	var $body = $('body');
+	var challengeButtons = $body.find('.btn-chall');
+
+	challengeButtons.each(function(){
+		var thisButton = $(this),
+			challengeData = thisButton.data('table'),
+			challengeTable = $('.' + challengeData);
+
+		thisButton.click(function(){
+			challengeTable.fadeToggle();
+		});
+	});	
+}  
 
 /*
 * Notes: Written by Sam Deering, for drag/touch support
