@@ -41,7 +41,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <tbody>
           <?php
           foreach($chall_entries as $war_entry): //warrior challenges only
-            if( $war_entry['challenge_entry_challenge_type'][1] == 'Warrior' ):
+            if( ($war_entry['challenge_entry_challenge_type'][1] == 'Warrior') && (!$war_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($war_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
@@ -69,7 +69,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <tbody>
           <?php
           foreach($chall_entries as $art_entry): //artisan challenges only
-            if( $art_entry['challenge_entry_challenge_type'][1] == 'Artisan' ):
+            if( ($art_entry['challenge_entry_challenge_type'][1] == 'Artisan') && (!$art_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($art_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
@@ -97,7 +97,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <tbody>
           <?php
           foreach($chall_entries as $gath_entry): //gatherer challenges only
-            if( $gath_entry['challenge_entry_challenge_type'][1] == 'Gatherer' ):
+            if( ($gath_entry['challenge_entry_challenge_type'][1] == 'Gatherer') && (!$gath_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($gath_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
@@ -126,7 +126,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <tbody>
           <?php
           foreach($chall_entries as $coll_entry): //collector challenges only
-            if( $coll_entry['challenge_entry_challenge_type'][1] == 'Collector' ):
+            if( ($coll_entry['challenge_entry_challenge_type'][1] == 'Collector') && (!$coll_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($coll_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
@@ -154,7 +154,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <tbody>
           <?php
           foreach($chall_entries as $past_entry): //past challenges only
-            if( $past_entry['challenge_entry_challenge_type'][1] == 'Collector' ):
+            if( ($past_entry['challenge_entry_challenge_type'][1] == 'Collector') && (!$past_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($past_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
@@ -183,7 +183,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <tbody>
           <?php
           foreach($chall_entries as $cards_entry): //cards challenges only
-            if( $cards_entry['challenge_entry_challenge_type'][1] == 'Cards' ):
+            if( ($cards_entry['challenge_entry_challenge_type'][1] == 'Cards') && (!$cards_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($cards_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
