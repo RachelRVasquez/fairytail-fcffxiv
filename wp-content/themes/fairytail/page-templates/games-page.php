@@ -22,9 +22,9 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
 		<div id="content" role="main">
       <div class="gmg-wrap remodal-bg">
 
-        <a href='#' data-remodal-target='index-modal'>Index</a>
-        <a href="<?php echo site_url('proof-completion'); ?>">Proof of Completion</a>
-        <a href="<?php echo site_url('challenge-archive'); ?>">Challenge Archive</a>
+        <a href="#" data-remodal-target='index-modal' class="gmg-top-links border-radius">Index</a>
+        <a href="#" class="gmg-top-links border-radius middle">Proof of Completion (Coming Soon!)</a>
+        <a href="<?php echo site_url('challenge-archive'); ?>" class="gmg-top-links border-radius">Challenge Archive</a>
 
         <div class="clear"></div>
         <!-- == WARRIOR ===================================== -->

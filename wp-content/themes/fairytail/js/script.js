@@ -137,15 +137,9 @@ function challengeToggle(){
 
 		thisButton.click(function(){
 			if( challengeTable.is(':visible') ){
-				challengeTable.hide('blind', {
-				  duration: 1000,
-				  easing: 'easeOutBounce', 
-				});
+				challengeTable.slideUp();
 			} else {
-				challengeTable.show('blind', {
-				  duration: 1000,
-				  easing: 'easeOutBounce', 
-				});
+				challengeTable.slideDown();
 			}
 		});
 	});	
