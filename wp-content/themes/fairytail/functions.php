@@ -413,7 +413,7 @@ function blankSlate_load_javascript_files() {
 		wp_enqueue_script('jquery-ui');
 	}
 
-	if( is_page('grand-magic-games') ){
+	if( is_page('grand-magic-games') || is_page('challenge-archive') ){
 		wp_enqueue_script('re-modal-script');
 	}
 
@@ -496,6 +496,13 @@ function ft_body_classes( $classes ) {
 	if( is_page_template('page-templates/games-page.php') ){
 		// add 'class-name' to the $classes array
 		$classes[] = 'grand-magic-games';
+		// return the $classes array
+		return $classes;
+	}
+
+	if( is_page_template('page-templates/games-archive.php') ){
+		// add 'class-name' to the $classes array
+		$classes[] = 'gmg-archive';
 		// return the $classes array
 		return $classes;
 	}

@@ -460,8 +460,8 @@ border-bottom: 4px solid #760303; margin-bottom: 20px; }
 /* Copied from roster bc no modular == lazy */
 /* Code is shit anyway - someday I'll fix this T^T */
 .gmg-table { border: 1px solid #888; margin-bottom: 20px; margin-top: -20px; border-top-color: #000; width: 600px; display: none; }
-.remodal .gmg-table { display: block; }
-.gmg-table.archive-table { display: block; }
+.remodal .gmg-table { display: table; }
+.gmg-table.archive-table { display: table; }
 .archive-table { margin-top: 25px; }
 .gmg-table tr th, .gmg-table tr td { vertical-align: middle; padding: 10px 3px; text-align: center; font-size: 14px; line-height:14px; }
 .gmg-table tr th { border-left: 1px solid #888;
@@ -490,5 +490,29 @@ background: url('../images/bgs/bg_paper.jpg') repeat; padding: 5px 1%; }
 .medium-stars { width: 70px; } 
 .hard-stars { width: 120px; }
 
-.gmg-top-links { margin-bottom: 25px; display: inline-block; background-color: #000; padding: 5px 8px; }
+.gmg-top-links { margin-bottom: 25px; display: inline-block; vertical-align: top; padding: 5px 8px; width: 150px; height: 150px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+border: 5px solid #fff;
+-webkit-transition: all 500ms ease-out;
+-moz-transition: all 500ms ease-out;
+-o-transition: all 500ms ease-out;
+transition: all 500ms ease-out; 
+opacity: .8; }
 .gmg-top-links.middle { margin-left: 10px; margin-right: 10px; }
+#gmg-top-01 { background: url('../images/bg-sting.png') no-repeat; background-size: 100%; }
+#gmg-top-02 { background: url('../images/bg-rogue.png') no-repeat -34px 0; background-size: 151%;}
+#gmg-top-03 { background: url('../images/bg-jenny.png') no-repeat; background-size: 100%;}
+#gmg-top-04 { background: url('../images/bg-kagura.png') no-repeat; background-size: 100%;}
+#gmg-top-05 { background: url('../images/bg-ichiya.png') no-repeat -32px 0; background-size: 165%;}
+.gmg-top-links span { display: block; color: #fff; font-size: 16px; line-height: 16px; 
+text-shadow: 2px 2px 1px #220c5e; text-transform: uppercase; font-weight: bold;
+margin-top: 110px; text-align: center; }
+.gmg-top-links:hover {
+-webkit-transition: all 500ms ease-out;
+-moz-transition: all 500ms ease-out;
+-o-transition: all 500ms ease-out;
+transition: all 500ms ease-out; 
+opacity: 1; }
+

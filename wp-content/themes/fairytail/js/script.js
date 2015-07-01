@@ -15,7 +15,7 @@ $(document).ready(function($) {
 	/*Grand magic games*/
 	var $body = $('body');
 
-	if($body.hasClass('grand-magic-games')){
+	if($body.hasClass('grand-magic-games') || $body.hasClass('gmg-archive')){
 		challengeToggle();
 	}
 	
@@ -137,9 +137,9 @@ function challengeToggle(){
 
 		thisButton.click(function(){
 			if( challengeTable.is(':visible') ){
-				challengeTable.slideUp();
+				challengeTable.fadeOut();
 			} else {
-				challengeTable.slideDown();
+				challengeTable.fadeIn();
 			}
 		});
 	});	

@@ -16,15 +16,14 @@ get_header();
 $chall_entries = get_group('challenge_entry', $post_id=4602);
 ?>
 
-
-
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
       <div class="gmg-wrap remodal-bg">
 
-        <a href="#" data-remodal-target='index-modal' class="gmg-top-links border-radius">Index</a>
-        <a href="#" class="gmg-top-links border-radius middle">Proof of Completion (Coming Soon!)</a>
-        <a href="<?php echo site_url('challenge-archive'); ?>" class="gmg-top-links border-radius">Challenge Archive</a>
+        <a href="#" data-remodal-target='index-modal' class="gmg-top-links border-radius" id="gmg-top-01"><span>Index</span></a>
+        <a href="<?php echo site_url('forums/topic/grand-magic-games-proof-of-completion'); ?>" class="gmg-top-links border-radius middle" id="gmg-top-02"><span>Proof of Completion</span></a>
+        <a href="<?php echo site_url('forums/topic/fairy-tail-triad-proof-of-victory'); ?>" class="gmg-top-links border-radius middle" id="gmg-top-03"><span>Proof of Victory</span></a>
+        <a href="<?php echo site_url('challenge-archive'); ?>" class="gmg-top-links border-radius" id="gmg-top-04"><span>Past Challenges</span></a>
 
         <div class="clear"></div>
         <!-- == WARRIOR ===================================== -->
