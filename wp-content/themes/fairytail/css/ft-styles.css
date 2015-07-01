@@ -9,7 +9,7 @@ Styles to build the custom theme from blankslate.
 /*==== Global Classes ====*/
 .overflow { overflow:hidden; }
 .clear { clear: both; }
-.btn-class { display:block; text-decoration:none; border:none; cursor:pointer; }
+.btn-class { display:block; text-decoration:none; border:none; }
 .text-indent { text-indent: -9999px; *font-size: 0; *line-height: 0; }
 .float-left { float: left; }
 .float-right { float: right; }
@@ -186,6 +186,7 @@ border-bottom: 1px solid #000; -webkit-box-shadow: 0 8px 13px -6px #777; box-sha
 .logged-in-sidebar, .logged-out-sidebar { display: none; }
 
 .widget.member-tools ul { margin-left: 8px; }
+.widget.member-tools ul li .btn-class { width: 205px; height: 56px; }
 .widget.member-tools ul li a { width: 205px; height: 56px; }
 .widget.member-tools ul li a.btn-login { background: url('../images/buttons/btn-login.png') no-repeat top left; }
 .widget.member-tools ul li a.btn-apply { background: url('../images/buttons/btn-apply.png') no-repeat top left; }
