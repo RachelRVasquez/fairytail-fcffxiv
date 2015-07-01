@@ -74,11 +74,16 @@
 	#bbpress-forums li.bbp-body li.bbp-forum-freshness { width: 60%; }
 	.bbp-pagination { padding-left: 10px; }
 
+	/*Achievements*/
+	.dpa-archive-achievements thead tr th:nth-of-type(2),
+	.dpa-archive-achievements tbody tr td:nth-of-type(2) { display: none!important; }
+
 }/*mobile 766*/	
 
 @media all and (max-width: 320px) {
 	/*Global*/
 	html, body { max-width: 320px; }
+	body { background-repeat: repeat; }
 	.banner-rotate { height: 56px; background-size: 150%; background-position: center; }
 	.box-style h2 { margin-bottom: 5px; }
 	.logo-links { width: 100%; }

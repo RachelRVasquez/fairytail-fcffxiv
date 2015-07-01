@@ -20,14 +20,21 @@ Styles to build the custom theme from blankslate.
 
 /*==== Structure & Fallbacks ====*/
 body { 
-background: url('../images/bgs/bg-heavensward.jpg') no-repeat top center fixed; 
+background: url('../images/bgs/bg-heavensward02.png') no-repeat top center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width: 100%; height: 100%;
+font-family: 'ABeeZee', sans-serif;
+}
+.grand-magic-games { background: url('../images/bgs/bg-grand-magic-games.png') no-repeat top center fixed; 
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
 width: 100%; height: 100%;
 background-size: 100%; 
-font-family: 'ABeeZee', sans-serif;
 }
 .wrapper { width: 100%; max-width: 980px; }
 .left-banner, .right-banner { height: 810px; top: 100px; }
@@ -92,7 +99,8 @@ html, body { height: 100%; }
 /*==== Header ====*/
 .site-header { width: 924px; margin-top: 10px; z-index: 100; }
 .site-header h1 { padding: 0; margin: 0; }
-.site-header h1 a { display: block; background:url('../images/banners/banner.png') no-repeat top left; width: 100%; height: 295px; }
+.site-header h1 a { display: block; background: url('../images/banners/banner.png') no-repeat top left; width: 100%; height: 295px; }
+.grand-magic-games .site-header h1 a { background: url('../images/banners/banner-gmg.png') no-repeat top center; background-size: 300px; }
 .main-navigation { height: 42px; }
 .main-menu { overflow: hidden; }
 .main-menu > li { float: left; margin: 0 8px; }
@@ -175,21 +183,26 @@ border-bottom: 1px solid #000; -webkit-box-shadow: 0 8px 13px -6px #777; box-sha
 .quick-links ul li a:hover { opacity: 1; filter: alpha(opacity=100); }
 .widget.server-stats td { color: #222; }
 
+.logged-in-sidebar, .logged-out-sidebar { display: none; }
+
 .widget.member-tools ul { margin-left: 8px; }
 .widget.member-tools ul li .btn-class { width: 205px; height: 56px; }
-.widget.member-tools ul li .btn-login { background: url('../images/buttons/btn-login.png') no-repeat top left; }
-.widget.member-tools ul li .btn-apply { background: url('../images/buttons/btn-apply.png') no-repeat top left; }
-.widget.member-tools ul li .btn-memsearch { background: url('../images/buttons/btn-search.png') no-repeat top left; }
-.widget.member-tools ul li .btn-groups { background: url('../images/buttons/btn-chat.png') no-repeat top left; }
-.widget.member-tools ul li .btn-achievements { background: url('../images/buttons/btn-achievements.png') no-repeat top left; }
-.widget.member-tools ul li .btn-twitch{ background: url('../images/buttons/btn-twitch.png') no-repeat top left; }
-.widget.member-tools ul li .btn-srank { background: url('../images/buttons/btn-srank.png') no-repeat top left; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
-.widget.member-tools ul li .btn-mom{ background: url('../images/buttons/btn-mom.png') no-repeat top left; }
-.widget.member-tools ul li .btn-login:hover, .widget.member-tools ul li .btn-apply:hover, 
-.widget.member-tools ul li .btn-memsearch:hover, .widget.member-tools ul li .btn-groups:hover,
-.widget.member-tools ul li .btn-achievements:hover, .member-tools ul li .btn-twitch:hover,
+.widget.member-tools ul li a { width: 205px; height: 56px; }
+.widget.member-tools ul li a.btn-login { background: url('../images/buttons/btn-login.png') no-repeat top left; }
+.widget.member-tools ul li a.btn-apply { background: url('../images/buttons/btn-apply.png') no-repeat top left; }
+.widget.member-tools ul li a.btn-memsearch { background: url('../images/buttons/btn-search.png') no-repeat top left; }
+.widget.member-tools ul li a.btn-groups { background: url('../images/buttons/btn-chat.png') no-repeat top left; }
+.widget.member-tools ul li a.btn-achievements { background: url('../images/buttons/btn-achievements.png') no-repeat top left; }
+.widget.member-tools ul li a.btn-twitch{ background: url('../images/buttons/btn-twitch.png') no-repeat top left; }
+.widget.member-tools ul li a.btn-srank { background: url('../images/buttons/btn-srank.png') no-repeat top left; }
+.widget.member-tools ul li a.btn-mom{ background: url('../images/buttons/btn-mom.png') no-repeat top left; }
+.widget.member-tools ul li a.btn-gmg{ background: url('../images/buttons/btn-gmg.png') no-repeat top left; }
+.widget.member-tools ul li a.btn-login:hover, .widget.member-tools ul li a.btn-apply:hover, 
+.widget.member-tools ul li a.btn-memsearch:hover, .widget.member-tools ul li a.btn-groups:hover,
+.widget.member-tools ul li a.btn-achievements:hover, .member-tools ul li a.btn-twitch:hover,
 .member-tools ul li a.btn-srank:hover,
-.widget.member-tools ul li .btn-mom:hover { background-position: bottom left; }
+.widget.member-tools ul li a.btn-mom:hover,
+.widget.member-tools ul li a.btn-gmg:hover { background-position: bottom left; }
 
 #dpa-redemption-form label, #dpa-redemption-submit { font-size: 12px; }
 #dpa-redemption-submit { margin: 10px 0 0; }
@@ -197,6 +210,9 @@ border-bottom: 1px solid #000; -webkit-box-shadow: 0 8px 13px -6px #777; box-sha
 .widget_dpa_leaderboard { overflow: hidden; }
 .widget_dpa_leaderboard tbody tr:first-child td { padding-top: 0; }
 .widget_dpa_leaderboard tbody tr td { text-align: center; } 
+div.dpa-template-notice.info { background-color: #222; border-color: #222; }
+#dpa-achievements img { width: 75px; height: 75px; }
+#dpa-achievements th { font-family: 'Artifika', Georgia, "Times New Roman", Times, serif; }
 
 /*==== Home ====*/
 .home-carousel { clear: both; }
@@ -430,3 +446,74 @@ width: 13%; text-align: center; }
 /*==== Watu Quiz (plugin) ====*/
 .quiz-area { background-color: #fff; padding: 10px; }
 .quiz-area ul, .quiz-area label, .quiz-area p { font-size: 13px; line-height: 16px; color: #222; }
+
+/*==== Grand Magic Games ====*/
+.btn-chall { background: url('../images/sprite-gmg-challenges.png') no-repeat; height: 34px; width: 600px; text-indent: -9999px; border: none;
+border-bottom: 4px solid #760303; margin-bottom: 20px; }
+.btn-chall-one { background-position: 0 0; }
+.btn-chall-two { background-position: 294px -55px; }
+.btn-chall-three { background-position: 0 -110px; }
+.btn-chall-four { background-position: 267px -161px; }
+.btn-chall-five { background-position: 0 -219px; }
+.btn-chall-six { background-position: 318px -267px; }
+.btn-chall:hover, .btn-chall:focus, .btn-chall:active { -webkit-filter: grayscale(100%); filter: grayscale(100%); border-color: #111; outline: none; }
+
+/* Copied from roster bc no modular == lazy */
+/* Code is shit anyway - someday I'll fix this T^T */
+.gmg-table { border: 1px solid #888; margin-bottom: 20px; margin-top: -20px; border-top-color: #000; width: 600px; display: none; }
+.remodal .gmg-table { display: table; }
+.gmg-table.archive-table { display: table; }
+.archive-table { margin-top: 25px; }
+.gmg-table tr th, .gmg-table tr td { vertical-align: middle; padding: 10px 3px; text-align: center; font-size: 14px; line-height:14px; }
+.gmg-table tr th { border-left: 1px solid #888;
+background: rgb(38,38,38); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(38,38,38,1) 0%, rgba(86,86,86,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(38,38,38,1)), color-stop(100%,rgba(86,86,86,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(38,38,38,1) 0%,rgba(86,86,86,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(38,38,38,1) 0%,rgba(86,86,86,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(38,38,38,1) 0%,rgba(86,86,86,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(38,38,38,1) 0%,rgba(86,86,86,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', endColorstr='#565656',GradientType=0 ); /* IE6-9 */
+font-family: 'Artifika', Georgia, "Times New Roman", Times, serif; color: #fff;
+text-shadow: 1px 1px 0px #000; filter: dropshadow(color=#182e36, offx=1, offy=1); }
+.gmg-table tr td { background-color: #fafafa; border-left: 1px solid #888; border-bottom: 1px solid #888;
+background: url('../images/bgs/bg_paper.jpg') repeat; padding: 5px 1%; }
+.gmg-table tr th:first-child, .gmg-table tr td:first-child { border-left: none; }
+.gmg-table tr td p { color: #000; }
+.gmg-table tr td a, .gmg-table tr td a:visited { color: #2d2d2d; text-decoration:underline; }
+.gmg-table tr td a:hover { color: #FFD200; }
+
+.index-content, .index-content p { color: #000; text-align: left; }
+.index-content p a, .index-content a { color: #760303; }
+
+.easy-stars, .medium-stars, .hard-stars { background: url('../images/bg-stars.png') no-repeat; height: 30px; }
+.easy-stars { width: 30px; } 
+.medium-stars { width: 70px; } 
+.hard-stars { width: 120px; }
+
+.gmg-top-links { margin-bottom: 25px; display: inline-block; vertical-align: top; padding: 5px 8px; width: 150px; height: 150px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+border: 5px solid #fff;
+-webkit-transition: all 500ms ease-out;
+-moz-transition: all 500ms ease-out;
+-o-transition: all 500ms ease-out;
+transition: all 500ms ease-out; 
+opacity: .8; }
+.gmg-top-links.middle { margin-left: 10px; margin-right: 10px; }
+#gmg-top-01 { background: url('../images/bg-sting.png') no-repeat; background-size: 100%; }
+#gmg-top-02 { background: url('../images/bg-rogue.png') no-repeat -34px 0; background-size: 151%;}
+#gmg-top-03 { background: url('../images/bg-jenny.png') no-repeat; background-size: 100%;}
+#gmg-top-04 { background: url('../images/bg-kagura.png') no-repeat; background-size: 100%;}
+#gmg-top-05 { background: url('../images/bg-ichiya.png') no-repeat -32px 0; background-size: 165%;}
+.gmg-top-links span { display: block; color: #fff; font-size: 16px; line-height: 16px; 
+text-shadow: 2px 2px 1px #220c5e; text-transform: uppercase; font-weight: bold;
+margin-top: 110px; text-align: center; }
+.gmg-top-links:hover {
+-webkit-transition: all 500ms ease-out;
+-moz-transition: all 500ms ease-out;
+-o-transition: all 500ms ease-out;
+transition: all 500ms ease-out; 
+opacity: 1; }
+

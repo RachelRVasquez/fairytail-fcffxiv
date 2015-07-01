@@ -1,3 +1,6 @@
+;(function ($, window, document, undefined) {
+  'use strict'; //enable strict mode
+
 $(document).ready(function($) {
 	/*Roster Page*/
 	rosterToggle();
@@ -8,6 +11,13 @@ $(document).ready(function($) {
 	/*Mobile*/
 	mobileMenu();
 	mobileClasses();
+
+	/*Grand magic games*/
+	var $body = $('body');
+
+	if($body.hasClass('grand-magic-games') || $body.hasClass('gmg-archive')){
+		challengeToggle();
+	}
 	
 });//end of doc ready
 
@@ -108,7 +118,32 @@ function homeSlider(){
 	$('.flexslider').flexslider({
 		animation: "slide"
 	});
-}		  
+}	
+
+/*
+* @challengeToggle()
+* Notes: Grand Magic Games, hide/show tables
+* Based on data-table button attribute and table class
+* Last Updated: 6/28/2015
+*/
+function challengeToggle(){
+	var $body = $('body');
+	var challengeButtons = $body.find('.btn-chall');
+
+	challengeButtons.each(function(){
+		var thisButton = $(this),
+			challengeData = thisButton.data('table'),
+			challengeTable = $('.' + challengeData);
+
+		thisButton.click(function(){
+			if( challengeTable.is(':visible') ){
+				challengeTable.fadeOut();
+			} else {
+				challengeTable.fadeIn();
+			}
+		});
+	});	
+}  
 
 /*
 * Notes: Written by Sam Deering, for drag/touch support
@@ -154,3 +189,5 @@ $.fn.addTouch = function(){
     first.target.dispatchEvent(simulatedEvent);
   };
 };
+
+}(jQuery, window, window.document)); //no conflict wrapper

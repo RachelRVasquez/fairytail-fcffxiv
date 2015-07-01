@@ -119,14 +119,19 @@ function twentytwelve_scripts_styles() {
 	/*
 	 * Loads our main stylesheet.
 	 */
-	/*wp_enqueue_style( 'google-font-styles', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Artifika' );*/
-	wp_enqueue_style( 'google-font-styles', 'http://fonts.googleapis.com/css?ABeeZee:400,400italic|Artifika' ); 
+	wp_enqueue_style( 'google-font-styles', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Artifika' );
+	/*wp_enqueue_style( 'google-font-styles', 'http://fonts.googleapis.com/css?ABeeZee:400,400italic|Artifika' );*/ 
 	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'fairytail-styles', get_template_directory_uri() . '/css/ft-styles.css' );
 	wp_enqueue_style( 'ft-buddypress-styles', get_template_directory_uri() . '/css/ft-buddypress.css' );
 	wp_enqueue_style( 'ft-bbpress-styles', get_template_directory_uri() . '/css/ft-bbpress.css' );
 	wp_enqueue_style( 'flex-slider-styles', get_template_directory_uri() . '/css/flexslider.css' );
 	wp_enqueue_style( 'mobile-styles', get_template_directory_uri() . '/css/mobile.css' );
+
+	if( is_page('grand-magic-games') ){
+		wp_enqueue_style( 're-modal-css', get_template_directory_uri(). '/css/remodal.css');
+		wp_enqueue_style( 're-modal-theme-css', get_template_directory_uri(). '/css/remodal-default-theme.css');
+	}
 
 	/*
 	 * Loads the Internet Explorer specific stylesheet. You could however just hook into the html class that modernizr adds.
@@ -394,79 +399,113 @@ function twentytwelve_customize_preview_js() {
 function blankSlate_load_javascript_files() {
 
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', false, '1.8.3');
-	wp_register_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', false, '1.8.3');
+	wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '1.11.3');
+	wp_register_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', false, '1.11.3');
 
-	wp_register_script( 'site-script', get_template_directory_uri() . '/js/script.js', array('jquery') );
 	wp_register_script( 'modernizer', get_template_directory_uri() . '/js/modernizr-2.5.3.min.js', false, false, true );
-	wp_register_script( 'home-page-main-flex-slider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', false, true );
+	wp_register_script( 'home-page-main-flex-slider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery') );
+	wp_register_script('re-modal-script', get_template_directory_uri() . '/js/remodal.js', array('jquery') );
+	wp_register_script( 'site-script', get_template_directory_uri() . '/js/script.js', array('jquery') );
 
 	wp_enqueue_script('jquery');
+
 	if ( is_page('roster')) {
 		wp_enqueue_script('jquery-ui');
 	}
-	wp_enqueue_script('site-script');
-	wp_enqueue_script('modernizer');
-  
+
+	if( is_page('grand-magic-games') || is_page('challenge-archive') ){
+		wp_enqueue_script('re-modal-script');
+	}
+
 	if ( is_front_page() ) {
 		wp_enqueue_script('home-page-main-flex-slider');
 	}
+
+	wp_enqueue_script('site-script');
+	wp_enqueue_script('modernizer');
+	
 }
 
 add_action( 'wp_enqueue_scripts', 'blankSlate_load_javascript_files' );
 
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
+/* ==== CUSTOM RACHEL CODE ====== */
+
+/**
+ * Detect plugin. For use on Front End only.
+ */
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
 /* Excerpts */
-function custom_excerpt_length( $length ) {
+function ft_custom_excerpt_length( $length ) {
 	return 20;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'ft_custom_excerpt_length', 999 );
 
-function new_excerpt_more( $more ) {
+function ft_new_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
 }
-add_filter( 'excerpt_more', 'new_excerpt_more' );
+add_filter( 'excerpt_more', 'ft_new_excerpt_more' );
 
 /** BBPress filter to add description after forums titles on forum index */
-function add_bbp_display_forum_description() {
+function ft_add_bbp_display_forum_description() {
     echo '<div class="bbp-forum-content">' ;
     bbp_forum_content() ;
     echo '</div>';
     }
-add_action( 'bbp_template_before_single_forum' , 'add_bbp_display_forum_description' );
+add_action( 'bbp_template_before_single_forum' , 'ft_add_bbp_display_forum_description' );
 
 /* BBPress create vertical list */
-function custom_bbp_sub_forum_list() {
+function ft_custom_bbp_sub_forum_list() {
   $args['separator'] = '<br>';
   return $args;
 }
- add_filter('bbp_before_list_forums_parse_args', 'custom_bbp_sub_forum_list' );
+ add_filter('bbp_before_list_forums_parse_args', 'ft_custom_bbp_sub_forum_list' );
 
 /* BBPress remove topic count */
-function remove_counts() {
+function ft_remove_counts() {
 $args['show_topic_count'] = false;
 $args['show_reply_count'] = false;
 $args['count_sep'] = '';
  return $args;
 }
-add_filter('bbp_before_list_forums_parse_args', 'remove_counts' );
+add_filter('bbp_before_list_forums_parse_args', 'ft_remove_counts' );
 
 
 // Add Recent Topics to BBPress
-function recent_bbpress_topics(){
+function rft_ecent_bbpress_topics(){
  if ( bbp_has_topics( array( 'author' => 0, 'show_stickies' => false, 'order' => 'DESC', 'post_parent' => 'any', 'posts_per_page' => 5 ) ) )
  bbp_get_template_part( 'bbpress/loop', 'topics' );
 }
 // Hook into action
-add_action('bbp_template_after_forums_loop','recent_bbpress_topics');
+add_action('bbp_template_after_forums_loop','ft_recent_bbpress_topics');
 
 // Add New label to BBPress Topics
-function rk_new_topics() {
+function ft_new_topics() {
 $offset = 60*60*1; 
  
    if ( get_post_time() > date('U') - $offset )
       echo '<span class="new">[New]</span>';
 }
  
-add_action( 'bbp_theme_before_topic_title', 'rk_new_topics' );
+add_action( 'bbp_theme_before_topic_title', 'ft_new_topics' );
+
+// Add specific CSS class by filter
+function ft_body_classes( $classes ) {
+	if( is_page_template('page-templates/games-page.php') ){
+		// add 'class-name' to the $classes array
+		$classes[] = 'grand-magic-games';
+		// return the $classes array
+		return $classes;
+	}
+
+	if( is_page_template('page-templates/games-archive.php') ){
+		// add 'class-name' to the $classes array
+		$classes[] = 'gmg-archive';
+		// return the $classes array
+		return $classes;
+	}
+}
+add_filter( 'body_class', 'ft_body_classes' );
+
