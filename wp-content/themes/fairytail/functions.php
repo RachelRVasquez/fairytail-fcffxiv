@@ -474,7 +474,7 @@ add_filter('bbp_before_list_forums_parse_args', 'ft_remove_counts' );
 
 
 // Add Recent Topics to BBPress
-function rft_ecent_bbpress_topics(){
+function ft_recent_bbpress_topics(){
  if ( bbp_has_topics( array( 'author' => 0, 'show_stickies' => false, 'order' => 'DESC', 'post_parent' => 'any', 'posts_per_page' => 5 ) ) )
  bbp_get_template_part( 'bbpress/loop', 'topics' );
 }
@@ -491,21 +491,21 @@ $offset = 60*60*1;
  
 add_action( 'bbp_theme_before_topic_title', 'ft_new_topics' );
 
-// Add specific CSS class by filter
-function ft_body_classes( $classes ) {
-	if( is_page_template('page-templates/games-page.php') ){
-		// add 'class-name' to the $classes array
-		$classes[] = 'grand-magic-games';
-		// return the $classes array
-		return $classes;
-	}
+if( is_page_template('page-templates/games-page.php') || is_page_template('page-templates/games-archive.php') ){
+	// Add specific CSS class by filter
+	function ft_body_classes( $classes ) {
+		if( is_page_template('page-templates/games-page.php') ){
+			// add 'class-name' to the $classes array
+			$classes[] = 'grand-magic-games';
+		}
 
-	if( is_page_template('page-templates/games-archive.php') ){
-		// add 'class-name' to the $classes array
-		$classes[] = 'gmg-archive';
+		if( is_page_template('page-templates/games-archive.php') ){
+			// add 'class-name' to the $classes array
+			$classes[] = 'gmg-archive';
+		}
+
 		// return the $classes array
 		return $classes;
 	}
+	add_filter( 'body_class', 'ft_body_classes' );
 }
-add_filter( 'body_class', 'ft_body_classes' );
-
