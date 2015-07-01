@@ -29,9 +29,9 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
-                  <th class="mobile-second">Description</th>
+                  <th class="mobile-second">Objective</th>
                   <th class="mobile-third">Expires</th>
-                  <th class="mobile-fourth">Achievement</th>
+                  <th class="mobile-fourth">Unlocks</th>
               </tr>
           </thead>
           <tbody>
@@ -57,9 +57,9 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
-                  <th class="mobile-second">Description</th>
+                  <th class="mobile-second">Objective</th>
                   <th class="mobile-third">Expires</th>
-                  <th class="mobile-fourth">Achievement</th>
+                  <th class="mobile-fourth">Unlocks</th>
               </tr>
           </thead>
           <tbody>
@@ -85,9 +85,9 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
-                  <th class="mobile-second">Description</th>
+                  <th class="mobile-second">Objective</th>
                   <th class="mobile-third">Expires</th>
-                  <th class="mobile-fourth">Achievement</th>
+                  <th class="mobile-fourth">Unlocks</th>
               </tr>
           </thead>
           <tbody>
@@ -114,9 +114,9 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
-                  <th class="mobile-second">Description</th>
+                  <th class="mobile-second">Objective</th>
                   <th class="mobile-third">Expires</th>
-                  <th class="mobile-fourth">Achievement</th>
+                  <th class="mobile-fourth">Unlocks</th>
               </tr>
           </thead>
           <tbody>
@@ -142,9 +142,9 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
-                  <th class="mobile-second">Description</th>
+                  <th class="mobile-second">Objective</th>
                   <th class="mobile-third">Expires</th>
-                  <th class="mobile-fourth">Achievement</th>
+                  <th class="mobile-fourth">Unlocks</th>
               </tr>
           </thead>
           <tbody>
@@ -171,9 +171,9 @@ $chall_entries = get_group('challenge_entry', $post_id=4602);
           <thead>
               <tr>
                   <th class="mobile-first">Challenge</th>
-                  <th class="mobile-second">Description</th>
+                  <th class="mobile-second">Objective</th>
                   <th class="mobile-third">Expires</th>
-                  <th class="mobile-fourth">Achievement</th>
+                  <th class="mobile-fourth">Unlocks</th>
               </tr>
           </thead>
           <tbody>

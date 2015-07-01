@@ -14,7 +14,7 @@
 			<li><a href="<?php echo esc_url( home_url( '/achievements' ) ); ?>" class="btn-class text-indent btn-achievements">Achievement List</a></li>
 			<li><a href="<?php echo esc_url( home_url( '/member-of-the-month' ) ); ?>" class="btn-class text-indent btn-mom">Member of the Month</a></li>
 			<li><a href="<?php echo esc_url( home_url( '/twitch_page/fairy-tail-twitch-tv/' ) ); ?>" class="btn-class text-indent btn-twitch">Fairy Tail Twitch</a></li>
-			<li <?php if ( !is_user_logged_in() ) { echo 'class="logged-out-sidebar"'; }?>><a href="<?php echo esc_url( home_url( '/srank' ) ); ?>" class="btn-class text-indent btn-srank">S-Rank Exam</a></li>
+			<li <?php if ( !is_user_logged_in() ) { echo 'class="logged-out-sidebar"'; }?>><div class="btn-class text-indent btn-srank">S-Rank Exam</div></li>
 			<li <?php if ( !is_user_logged_in() ) { echo 'class="logged-out-sidebar"'; }?>><a href="<?php echo esc_url( home_url( '/grand-magic-games' ) ); ?>" class="btn-class text-indent btn-gmg">Grand Magic Games</a></li>
 		</ul>
 	</aside>
