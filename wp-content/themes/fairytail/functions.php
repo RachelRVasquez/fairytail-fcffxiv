@@ -402,7 +402,7 @@ function blankSlate_load_javascript_files() {
 	wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '1.11.3');
 	wp_register_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', false, '1.11.3');
 
-	wp_register_script( 'modernizer', get_template_directory_uri() . '/js/modernizr-2.5.3.min.js', false, false, true );
+	wp_register_script( 'modernizer', get_template_directory_uri() . '/js/modernizr.custom.59543.js', false, false, true );
 	wp_register_script( 'home-page-main-flex-slider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery') );
 	wp_register_script('re-modal-script', get_template_directory_uri() . '/js/remodal.js', array('jquery') );
 	wp_register_script( 'site-script', get_template_directory_uri() . '/js/script.js', array('jquery') );
@@ -490,22 +490,3 @@ $offset = 60*60*1;
 }
  
 add_action( 'bbp_theme_before_topic_title', 'ft_new_topics' );
-
-if( is_page_template('page-templates/games-page.php') || is_page_template('page-templates/games-archive.php') ){
-	// Add specific CSS class by filter
-	function ft_body_classes( $classes ) {
-		if( is_page_template('page-templates/games-page.php') ){
-			// add 'class-name' to the $classes array
-			$classes[] = 'grand-magic-games';
-		}
-
-		if( is_page_template('page-templates/games-archive.php') ){
-			// add 'class-name' to the $classes array
-			$classes[] = 'gmg-archive';
-		}
-
-		// return the $classes array
-		return $classes;
-	}
-	add_filter( 'body_class', 'ft_body_classes' );
-}
