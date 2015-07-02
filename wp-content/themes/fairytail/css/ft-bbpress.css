@@ -28,7 +28,7 @@ div.bbp-template-notice.info { background: #000; border-color: #000; }
 .top-wrapper span a, 
 .top-wrapper p a, 
 .top-wrapper h3 a, 
-.top-wrapper h2 a, 
+/*.top-wrapper h2 a, */
 SPAN.date a { font-size: 14px!important; }
 #bbpress-forums .bbp-forum-info .bbp-forum-content { font-size: 12px; }
 
