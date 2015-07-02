@@ -28,7 +28,17 @@
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri();?>/images/fav_icon.ico">
 </head>
 
-<body <?php body_class(); ?>>
+<?php 
+if( is_page_template('page-templates/games-page.php' ) ){
+    $custom_class = 'grand-magic-games';
+} elseif( is_page_template('page-templates/games-archive.php') ) {
+    $custom_class = 'gmg-archive';
+} else { 
+    $custom_class = 'fairy-tail-content';
+}
+?>
+
+<body <?php body_class($custom_class); ?>>
 <!-- FFXIV Tooltips from Lodestone Fankit -->
 <script src="http://img.finalfantasyxiv.com/lds/pc/global/js/eorzeadb/loader.js?v1"></script>
 

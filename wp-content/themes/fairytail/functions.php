@@ -490,22 +490,3 @@ $offset = 60*60*1;
 }
  
 add_action( 'bbp_theme_before_topic_title', 'ft_new_topics' );
-
-if( is_page_template('page-templates/games-page.php') || is_page_template('page-templates/games-archive.php') ){
-	// Add specific CSS class by filter
-	function ft_body_classes( $classes ) {
-		if( is_page_template('page-templates/games-page.php') ){
-			// add 'class-name' to the $classes array
-			$classes[] = 'grand-magic-games';
-		}
-
-		if( is_page_template('page-templates/games-archive.php') ){
-			// add 'class-name' to the $classes array
-			$classes[] = 'gmg-archive';
-		}
-
-		// return the $classes array
-		return $classes;
-	}
-	add_filter( 'body_class', 'ft_body_classes' );
-}
