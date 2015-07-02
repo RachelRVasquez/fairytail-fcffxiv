@@ -6,7 +6,7 @@
       <thead>
           <tr>
               <th class="mobile-first">Task</th>
-              <th class="mobile-second">Description</th>
+              <th class="mobile-second">Objective</th>
               <th class="mobile-third">Difficulty</th>
               <th class="mobile-fourth">Achievement</th>
           </tr>

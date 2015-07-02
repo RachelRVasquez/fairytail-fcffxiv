@@ -10,10 +10,12 @@
  * @package WordPress
  * @subpackage blankSlate
  * @since blankSlate 3.5
+ * 
+ * NOT CURRENTLY BEING USED!!!!! 7/1/2015
  */
 
 get_header(); 
-$chall_entries = get_group('challenge_entry', $post_id=4653);
+$chall_entries = get_group('challenge_entry', $post_id=4602);
 ?>
 
 	<div id="primary" class="site-content">
