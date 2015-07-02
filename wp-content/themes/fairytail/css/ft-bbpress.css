@@ -2,7 +2,10 @@
 
 /* General */
 #bbpress-forums { color: #fff; }
-.bbpress .site-content { width: 100%; }
+.bbpress.forum-archive .site-content,
+.bbpress.forum .site-content,
+.bbpress.topic .site-content { width: 100%; }
+
 #bbpress-forums ul.bbp-lead-topic, 
 #bbpress-forums ul.bbp-topics, 
 #bbpress-forums ul.bbp-forums, 
