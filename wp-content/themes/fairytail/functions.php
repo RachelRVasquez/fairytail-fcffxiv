@@ -490,3 +490,22 @@ $offset = 60*60*1;
 }
  
 add_action( 'bbp_theme_before_topic_title', 'ft_new_topics' );
+
+
+/**
+ * Grand Magic Games, pull task ID from challenge loop and create modal tables
+ */
+function ft_print_task_entry( $post_id ) {
+    $challenge_task = get_group( 'task_entry', $post_id ); // Passing the $post_id
+
+    foreach($challenge_task as $chall_task):
+        $task_ach_id = intval($chall_task['task_entry_achievement_id'][1]); //achievement ID
+        $task_ach_link = get_the_permalink($task_ach_id); //achievement link
+        echo "<tr>";  
+        echo "<td class='mobile-first'>" . $chall_task['task_entry_task_name'][1] . "</td>";
+        echo "<td class='mobile-second'>" . $chall_task['task_entry_task_desc'][1] . "</td>";
+        echo "<td class='mobile-third'><div class='" . $chall_task['task_entry_task_difficulty'][1] . "-stars margin-auto'></div></td>";
+        echo "<td class='mobile-fourth'><a href='" . $task_ach_link . "'>" . get_the_post_thumbnail( $task_ach_id, 'thumbnail' ) . "</a></td>";
+        echo "</tr>"; 
+    endforeach;    
+}

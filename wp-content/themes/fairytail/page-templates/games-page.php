@@ -13,7 +13,7 @@
  */
 
 get_header(); 
-$chall_entries = get_group('challenge_entry', $post_id=4653);
+$chall_entries = get_group('challenge_entry', $post_id=4643);
 ?>
 
 	<div id="primary" class="site-content">
@@ -39,17 +39,22 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
           </thead>
           <tbody>
           <?php
+          global $war_count;
+          $war_count = 0;
           foreach($chall_entries as $war_entry): //warrior challenges only
             if( ($war_entry['challenge_entry_challenge_type'][1] == 'Warrior') && (!$war_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($war_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'><a href='#' data-remodal-target='warrior-modal'>" . $war_entry['challenge_entry_challenge_name'][1] . "</a></td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='warrior-modal-" . $war_count . "'>" . $war_entry['challenge_entry_challenge_name'][1] . "</a>";
+              include( locate_template('/partials/gmg-war-modal.php') );
+              echo "</td>";
               echo "<td class='mobile-second'>" . $war_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'>" . $war_entry['challenge_entry_expiration'][1] . "</td>";
               echo "<td class='mobile-fourth'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>"; 
             endif;
+            $war_count++;
           endforeach; ?>
           </tbody>
         </table>
@@ -67,17 +72,24 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
           </thead>
           <tbody>
           <?php
+          global $art_count;
+          $art_count = 0;
           foreach($chall_entries as $art_entry): //artisan challenges only
             if( ($art_entry['challenge_entry_challenge_type'][1] == 'Artisan') && (!$art_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($art_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'><a href='#' data-remodal-target='artisan-modal'>" . $art_entry['challenge_entry_challenge_name'][1] . "</a></td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='artisan-modal-" . $art_count . "'>" . $art_entry['challenge_entry_challenge_name'][1] . "</a>";
+
+              include( locate_template('/partials/gmg-art-modal.php') );
+              echo "</td>";
               echo "<td class='mobile-second'>" . $art_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'>" . $art_entry['challenge_entry_expiration'][1] . "</td>";
               echo "<td class='mobile-fourth'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
             endif;
+            echo $art_count;
+            $art_count++;
           endforeach;
           ?>
           </tbody>
@@ -95,17 +107,22 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
           </thead>
           <tbody>
           <?php
+          global $gath_count;
+          $gath_count = 0;
           foreach($chall_entries as $gath_entry): //gatherer challenges only
             if( ($gath_entry['challenge_entry_challenge_type'][1] == 'Gatherer') && (!$gath_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($gath_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'><a href='#' data-remodal-target='gatherer-modal'>" . $gath_entry['challenge_entry_challenge_name'][1] . "</a></td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='gatherer-modal-" . $gath_count . "'>" . $gath_entry['challenge_entry_challenge_name'][1] . "</a>";
+              include( locate_template('/partials/gmg-gath-modal.php') );
+              echo "</td>";
               echo "<td class='mobile-second'>" . $gath_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'>" . $gath_entry['challenge_entry_expiration'][1] . "</td>";
               echo "<td class='mobile-fourth'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
             endif;
+            $gath_count++;
           endforeach;
           ?>
           </tbody>
@@ -124,17 +141,22 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
           </thead>
           <tbody>
           <?php
+          global $coll_count;
+          $coll_count = 0;
           foreach($chall_entries as $coll_entry): //collector challenges only
             if( ($coll_entry['challenge_entry_challenge_type'][1] == 'Collector') && (!$coll_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($coll_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'><a href='#' data-remodal-target='collector-modal'>" . $coll_entry['challenge_entry_challenge_name'][1] . "</a></td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='collector-modal-" . $coll_count . "'>" . $coll_entry['challenge_entry_challenge_name'][1] . "</a>";
+              include( locate_template('/partials/gmg-coll-modal.php') );
+              echo "</td>";
               echo "<td class='mobile-second'>" . $coll_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'>" . $coll_entry['challenge_entry_expiration'][1] . "</td>";
               echo "<td class='mobile-fourth'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
             endif;
+            $coll_count++;
           endforeach;
           ?>
           </tbody>
@@ -152,17 +174,22 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
           </thead>
           <tbody>
           <?php
+          global $past_count;
+          $past_count = 0;
           foreach($chall_entries as $past_entry): //past challenges only
-            if( ($past_entry['challenge_entry_challenge_type'][1] == 'Collector') && (!$past_entry['challenge_entry_archive_challenge'][1]) ):
+            if( ($past_entry['challenge_entry_challenge_type'][1] == 'Past') && (!$past_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($past_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'><a href='#' data-remodal-target='past-modal'>" . $past_entry['challenge_entry_challenge_name'][1] . "</a></td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='past-modal-" . $past_count . "'>" . $past_entry['challenge_entry_challenge_name'][1] . "</a>";
+              include( locate_template('/partials/gmg-past-modal.php') );
+              echo "</td>";
               echo "<td class='mobile-second'>" . $past_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'>" . $past_entry['challenge_entry_expiration'][1] . "</td>";
               echo "<td class='mobile-fourth'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
             endif;
+            $past_count++;
           endforeach;
           ?>
           </tbody>
@@ -181,17 +208,22 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
           </thead>
           <tbody>
           <?php
+          global $cards_count;
+          $cards_count = 0;
           foreach($chall_entries as $cards_entry): //cards challenges only
             if( ($cards_entry['challenge_entry_challenge_type'][1] == 'Cards') && (!$cards_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($cards_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'><a href='#' data-remodal-target='cards-modal'>" . $cards_entry['challenge_entry_challenge_name'][1] . "</a></td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='cards-modal-" . $cards_count . "'>" . $cards_entry['challenge_entry_challenge_name'][1] . "</a>";
+              include( locate_template('/partials/gmg-cards-modal.php') ); 
+              echo "</td>";
               echo "<td class='mobile-second'>" . $cards_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'>" . $cards_entry['challenge_entry_expiration'][1] . "</td>";
               echo "<td class='mobile-fourth'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
             endif;
+            $cards_count++;
           endforeach;
           ?>
           </tbody>
@@ -201,22 +233,10 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
 
       <?php 
       /* * 
-      * Partials for task modals & index 
+      * Partials for index modal 
       */
 
       include( locate_template('/partials/gmg-index-modal.php') );
-
-      include( locate_template('/partials/gmg-war-modal.php') );
-
-      include( locate_template('/partials/gmg-art-modal.php') );
-
-      include( locate_template('/partials/gmg-gath-modal.php') );
-
-      include( locate_template('/partials/gmg-coll-modal.php') );
-
-      include( locate_template('/partials/gmg-past-modal.php') );
-
-      include( locate_template('/partials/gmg-cards-modal.php') ); 
 
       ?>
       
