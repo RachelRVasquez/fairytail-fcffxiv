@@ -13,7 +13,7 @@
  */
 
 get_header(); 
-$chall_entries = get_group('challenge_entry', $post_id=4653);
+$chall_entries = get_group('challenge_entry', $post_id=4643);
 ?>
 
 	<div id="primary" class="site-content">
@@ -67,17 +67,24 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
           </thead>
           <tbody>
           <?php
+          global $art_count;
+          $art_count = 0;
           foreach($chall_entries as $art_entry): //artisan challenges only
             if( ($art_entry['challenge_entry_challenge_type'][1] == 'Artisan') && (!$art_entry['challenge_entry_archive_challenge'][1]) ):
               $ach_id = intval($art_entry['challenge_entry_achievement_id'][1]);
               $ach_link = get_the_permalink($ach_id);
               echo "<tr>";  
-              echo "<td class='mobile-first'><a href='#' data-remodal-target='artisan-modal'>" . $art_entry['challenge_entry_challenge_name'][1] . "</a></td>";
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='artisan-modal-".$art_count."'>" . $art_entry['challenge_entry_challenge_name'][1] . "</a>";
+
+              include( locate_template('/partials/gmg-art-modal.php') );
+              echo "</td>";
               echo "<td class='mobile-second'>" . $art_entry['challenge_entry_challenge_desc'][1] . "</td>";
               echo "<td class='mobile-third'>" . $art_entry['challenge_entry_expiration'][1] . "</td>";
               echo "<td class='mobile-fourth'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
             endif;
+            echo $art_count;
+            $art_count++;
           endforeach;
           ?>
           </tbody>
@@ -208,7 +215,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
 
       include( locate_template('/partials/gmg-war-modal.php') );
 
-      include( locate_template('/partials/gmg-art-modal.php') );
+      //include( locate_template('/partials/gmg-art-modal.php') );
 
       include( locate_template('/partials/gmg-gath-modal.php') );
 
