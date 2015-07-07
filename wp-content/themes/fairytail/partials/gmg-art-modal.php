@@ -15,7 +15,7 @@
       <tbody>
       <?php
           $task_post_id = intval($art_entry['challenge_entry_assign_task'][1]);
-          print_task_entry( $task_post_id );
+          ft_print_task_entry( $task_post_id );
       ?>
       </tbody>
     </table>
