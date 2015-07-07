@@ -13,7 +13,7 @@
  */
 
 get_header(); 
-$chall_entries = get_group('challenge_entry', $post_id=4643);
+$chall_entries = get_group('challenge_entry', $post_id=4653);
 ?>
 
 	<div id="primary" class="site-content">
