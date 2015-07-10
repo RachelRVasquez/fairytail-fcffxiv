@@ -44,3 +44,18 @@ div.swa-activity-meta { margin-bottom: 5px; }
 .simplemodal-container ul, .simplemodal-container ul li { list-style: none; margin: 0; padding: 0; }
 .simplemodal-container input[type="submit"] { border: none; background-color: #2d2d2d; color: #ccc; padding: 5px 10px; margin-top: 10px; }
 .rtmedia-activity-container .rtmedia-activity-text { color: #fff; }
+
+.bp-user #buddypress div.profile h4, 
+.bp-user .profile,
+.bp-user #message-thread h3,
+.bp-user #message-thread strong,
+.bp-user #message-threads tbody,
+.bp-user #settings-form { color: #fff; }
+
+.bp-user #buddypress div#message p { color: #f3b9bc; border-color: #5b0f12; }
+
+#buddypress table tr td.thread-info p.thread-excerpt,
+#buddypress div.pagination,
+#buddypress ul.item-list li div.meta,
+#buddypress ul.item-list li div.item-title span,
+.rtm-media-options { color: #aaa; }

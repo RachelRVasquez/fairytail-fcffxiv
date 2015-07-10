@@ -13,7 +13,7 @@
  */
 
 get_header(); 
-$chall_entries = get_group('challenge_entry', $post_id=4653);
+$chall_entries = get_group('challenge_entry', $post_id=4643);
 ?>
 
 	<div id="primary" class="site-content">
@@ -88,7 +88,6 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
               echo "<td class='mobile-fourth'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
             endif;
-            echo $art_count;
             $art_count++;
           endforeach;
           ?>
