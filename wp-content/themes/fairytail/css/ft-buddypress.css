@@ -59,3 +59,13 @@ div.swa-activity-meta { margin-bottom: 5px; }
 #buddypress ul.item-list li div.meta,
 #buddypress ul.item-list li div.item-title span,
 .rtm-media-options { color: #aaa; }
+
+#buddypress table.forum tr.alt td, 
+#buddypress table.messages-notices tr.alt td, 
+#buddypress table.notifications tr.alt td, 
+#buddypress table.notifications-settings tr.alt td, 
+#buddypress table.profile-fields tr.alt td, 
+#buddypress table.profile-settings tr.alt td, 
+#buddypress table.wp-profile-fields tr.alt td {
+	background: #222;
+}
