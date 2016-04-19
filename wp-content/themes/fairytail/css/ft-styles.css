@@ -462,6 +462,7 @@ border-bottom: 4px solid #760303; margin-bottom: 20px; }
 .btn-chall-four { background-position: 267px -161px; }
 .btn-chall-five { background-position: 0 -219px; }
 .btn-chall-six { background-position: 318px -267px; }
+.btn-chall-seven { background-position: 0 -325px; }
 .btn-chall:hover, .btn-chall:focus, .btn-chall:active { -webkit-filter: grayscale(100%); filter: grayscale(100%); border-color: #111; outline: none; }
 
 /* Copied from roster bc no modular == lazy */
