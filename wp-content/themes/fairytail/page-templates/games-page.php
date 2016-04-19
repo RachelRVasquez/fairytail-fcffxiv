@@ -227,6 +227,40 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
           ?>
           </tbody>
         </table>
+        <!-- == SWIFT ===================================== -->
+        <button role="button" name="challenge-trigger-seven" class="btn-chall btn-chall-seven float-left" data-table="swift-table">Challenges of the Cards</button>
+        <div class="clear"></div>
+        <table class="gmg-table swift-table overflow float-right">
+          <thead>
+              <tr>
+                  <th class="mobile-first">Challenge</th>
+                  <th class="mobile-second">Objective</th>
+                  <th class="mobile-third">Expires</th>
+                  <th class="mobile-fourth">Unlocks</th>
+              </tr>
+          </thead>
+          <tbody>
+          <?php
+          global $swift_count;
+          $swift_count = 0;
+          foreach($chall_entries as $swift_entry): //swift challenges only
+            if( ($swift_entry['challenge_entry_challenge_type'][1] == 'Swift') && (!$swift_entry['challenge_entry_archive_challenge'][1]) ):
+              $ach_id = intval($swift_entry['challenge_entry_achievement_id'][1]);
+              $ach_link = get_the_permalink($ach_id);
+              echo "<tr>";  
+              echo "<td class='mobile-first'><a href='#' data-remodal-target='swift-modal-" . $swift_count . "'>" . $swift_entry['challenge_entry_challenge_name'][1] . "</a>";
+              include( locate_template('/partials/gmg-swift-modal.php') ); 
+              echo "</td>";
+              echo "<td class='mobile-second'>" . $swift_entry['challenge_entry_challenge_desc'][1] . "</td>";
+              echo "<td class='mobile-third'>" . $swift_entry['challenge_entry_expiration'][1] . "</td>";
+              echo "<td class='mobile-fourth'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
+              echo "</tr>";
+            endif;
+            $cards_count++;
+          endforeach;
+          ?>
+          </tbody>
+        </table>
 		  </div><!--gmg-wrap-->
 
 
