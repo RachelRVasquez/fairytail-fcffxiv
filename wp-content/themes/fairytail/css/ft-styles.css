@@ -339,8 +339,12 @@ background: url('../images/bgs/bg_paper.jpg') repeat; }
 .roster-table tr td span.gsm { background-position: -150px -150px; }
 .roster-table tr td span.acn { background-position: -200px -150px; } 
 .roster-table tr td span.sch { background-position: -300px -150px; } 
-.roster-table tr td span.smn { background-position: -250px -150px;; }
+.roster-table tr td span.smn { background-position: -250px -150px; }
 .roster-table tr td span.nin { background-position: -0px -200px; }
+
+.roster-table tr td span.mch { background-position: -50px -200px; }
+.roster-table tr td span.ast { background-position: -100px -200px; }
+.roster-table tr td span.drk { background-position: -150px -200px; }
 
 .roster-table tr td.company span { width: 50px; height: 60px; background: url('../images/sprite_companies.png') no-repeat; }
 .roster-table tr td span.maelstrom { background-position: 0 0; }
