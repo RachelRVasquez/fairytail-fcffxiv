@@ -56,31 +56,13 @@ if( is_page_template('page-templates/games-page.php' ) ){
             	<li><a href="<?php echo esc_url( home_url( '/category/news' ) ); ?>" class="btn-class text-indent btn-news">News</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/roster' ) ); ?>" class="btn-class text-indent btn-roster">Roster</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/forums' ) ); ?>" class="btn-class text-indent btn-forums">Forums</a></li>
-                <li><a href="https://www.facebook.com/groups/592380790772218" target="_blank" class="btn-class text-indent btn-facebook">Facebook</a></li> 
-                <li><a href="http://fairytail.guildwork.com/" target="_blank" class="btn-class text-indent btn-guildwork">Guildwork</a></li> 
+                <li><a href="https://www.facebook.com/groups/1769459426602240" target="_blank" class="btn-class text-indent btn-facebook">Facebook</a></li> 
             </ul>
 		</nav><!-- #site-navigation -->
-		<!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" 
-        class="logo absolute"><img src="<?php echo get_template_directory_uri();?>/images/banners/logo.png" alt="Fairy Tail, Grand Company of Excalibur"/></a>-->
 	</header><!-- #masthead -->
     <div class="character-wrapper relative">
 	<div class="left-banner absolute hide-1024"></div>
     <div class="right-banner absolute hide-1024"></div>
 	<div id="main" class="wrapper overflow relative margin-auto box-sizing">
-    <!--<div class="social-media">
-    	<ul>
-        	<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://fairytail-freecompany.com" data-text="Check out this awesome Free Company on the Excalibur server - Fairy Tail!">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
-<li>
-<div class="g-plusone" data-size="small" data-href="http://fairytail-freecompany.com/"></div>
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script></li>
-        </ul>
-    </div>-->
     	<div class="middle-content overflow margin-auto border-radius box-sizing"><!--closes in footer-->
         	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="banner-rotate overflow border-radius text-indent btn-class box-sizing">Fairy Tail Free Company on Excalibur</a>

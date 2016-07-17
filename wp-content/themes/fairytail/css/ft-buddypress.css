@@ -69,3 +69,7 @@ div.swa-activity-meta { margin-bottom: 5px; }
 #buddypress table.wp-profile-fields tr.alt td {
 	background: #222;
 }
+
+#buddypress div#message-thread div.alt {
+	background: transparent;
+}

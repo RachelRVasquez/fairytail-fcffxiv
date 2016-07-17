@@ -76,3 +76,6 @@ div.bbp-template-notice, div.indicator-hint { background-color: transparent; }
 #bbpress-forums p.bbp-topic-meta img.avatar, #bbpress-forums div.bbp-template-notice img.avatar { width: 20px; height: 20px; }
 #bbpress-forums ul.bbp-topic-revision-log img.avatar { width: 15px; height: 15px; }
 
+.bbp-attachments-form input {
+	color: #fff;
+}

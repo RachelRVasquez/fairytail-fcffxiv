@@ -103,7 +103,7 @@ html, body { height: 100%; }
 .grand-magic-games .site-header h1 a { background: url('../images/banners/banner-gmg.png') no-repeat top center; background-size: 300px; }
 .main-navigation { height: 42px; }
 .main-menu { overflow: hidden; }
-.main-menu > li { float: left; margin: 0 8px; }
+.main-menu > li { float: left; margin: 0 3.4%; }
 .main-menu li a.btn-class { width: 167px; height: 40px; font-weight: bold; text-decoration: none; }
 .main-menu li .btn-news { background: url('../images/buttons/btn_news.png') no-repeat top left; }
 .main-menu li .btn-roster { background: url('../images/buttons/btn_roster.png') no-repeat top left; }
