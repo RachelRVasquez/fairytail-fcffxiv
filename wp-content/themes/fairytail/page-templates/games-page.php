@@ -256,7 +256,7 @@ $chall_entries = get_group('challenge_entry', $post_id=4653);
               echo "<td class='mobile-fourth'><a href='" . $ach_link . "'>" . get_the_post_thumbnail( $ach_id, 'thumbnail' ) . "</a></td>";
               echo "</tr>";
             endif;
-            $cards_count++;
+            $swift_count++;
           endforeach;
           ?>
           </tbody>
